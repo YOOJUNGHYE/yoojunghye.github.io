@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>korean air 홈페이지 만들기</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+      <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>   
+      <script type="text/javascript" src="jquery.banner.js"></script>
+      <link rel="stylesheet" href="css/androidicons.css"/>
+      <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+      <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto' rel='stylesheet' type='text/css'>
+      <script src="js/jquery-1.11.2.min.js"></script>
+      <script src="js/m_nav.js"></script>
+      <script src="js/jquery.flexslider-min.js"></script>
+      
+      <script type="text/javascript">
+
+         // Can also be used with $(document).ready()   
+         $(window).load(function() {
+           $('.flexslider').flexslider({
+            animation: "slide"
+           });
+         });
+
+      </script>  
+    
+    
+      <style>
+		/*구글에서 제공하는 나눔고딕 웹폰트주소*/
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+		
+		*{margin:0px; padding:0px;}
+		ul, ol{list-style-type:none;}
+		img{border:none;}
+		a{text-decoration:none;}
+		body{width:100%; height:100%;
+			position:relative;
+			font-family:'Nanum Gothic', Verdana, Arial;
+			font-size:0.75em; /* 0.75em은 pixel단위로 12px, %단위는 100%입니다.*/
+			color:#999;
+		}
+          
+          body{background-color:#ccc;background-image:url("./img/back.jpg");background-repeat:repeat-x;background-size:100% 40%;}
+          
+	  
+	  
+	  
+		/* 체크박스 숨기기 display:none;을 적어준다. */
+		#btn{display:none;}
+		
+		/*토글키*/
+		#btn ~ nav{opacity:0;margin-left:-200px;transition-duration:1s;}
+		#btn:checked ~ nav{opacity:1;margin:0px;}
+        
+		
+		/*내비게이션 서식*/
+      nav{background-color:#0099ff;width:200px;height:100%;position:absolute;top:0px;left:0px;z-index:999;}
+      nav label{color:#fff;line-height:36px;cursor:pointer;padding-left:10px;}
+      .ai-gear{font-size:15px;color:#fff;position:absolute;top:5px;right:10px;}
+
+      nav ul{}
+      nav ul li{line-height:30px;border-bottom:1px solid #fff;}
+      nav ul li:nth-of-type(1){background-color:#3366cc;border:none;}
+      nav ul li a{display:block;font-size:13px;line-height:30px;font-weight:bold;color:#fff;padding-left:10px;}
+      nav ul li  .ai-plus{position:absolute;right:10px;}
+		
+		
+		
+		/*헤더영역 안의 메뉴 위치 잡기*/
+		.ui-header{position:relative;}
+		ui-header label{position:absolute;top:5px;left:5px;}
+		
+		/*헤더영역 안의 메뉴 위치 잡기*/
+		.ui-header{position:relative;}
+		.ui-header label{position:absolute;top:10px;left:10px;cursor:pointer;}
+		.ui-header #log_mnu{position:absolute;top:10px;right:10px;cursor:pointer;}
+		.ui-header .ai-list{font-size:26px;font-weight:bold;}
+		.ui-header .ai-user{font-size:26px;font-weight:bold;}
+		
+        /*헤더안에 배경색깔 넣기*/
+        .ui-header {background-color:#5db9d2;}
+		/*korean air 로고 최대-최소로 만들기*/
+		.ui-header h1 img{max-width:310px;width:100%;}
+		
+          /*content에 이미지 넣기*/
+      
+          
+        /*content에 이미지*/
+        
+        #section .flexslider {width:66%; float:left; border:10px solid #fff; box-sizing:border-box;}
+      #section #img01 img {width:32.5%;float:left; margin-left:1.2%;}
+      #section #img02 img {width:32.5%;float:left; margin-left:1.2%; margin-top:1%;}
+      #section #img03 img {width:32.6%;float:left; clear:both;margin-top:-52px;}
+      #section #img04 img {width:32.6%;float:left; margin:-52px 1%;}
+      #section #img05 img {width:32.6%;float:left; margin-top:-52px; }
+        
+        /*content에 로그인 이미지 넣기*/
+        #sky img{width:100%;margin-top:10px;}  
+          
+        /*footer에 목록 넣기*/
+		#last{text-align:center;margin:0 auto;width:362px;}
+		#login{overflow:hidden;clear:both;}
+		#login li{float:left;width:110px;}
+		#login li a {
+			font-size:1.2em;
+			color:#000;
+			
+		}
+		#login li:nth-child(1) {margin:0px 15px;}
+        #login li:nth-child(2){border-left:1px solid #000;border-right:1px solid #000;} 
+		#login li:nth-child(2) a {margin:;}
+		#last p {color:#000; margin-top:7px; font-size:1.1em;}
+	  </style>
+</head>
+<body>
+	<div data-role="page" id="index" data-theme="f">
+		<input type="checkbox" data-role="none" id="btn" />
+		<div data-role="header" data-theme="f">
+			<label for="btn">
+				<span class="ai-list"></span>
+			</label>
+			<h1><img src="./img/txt_logo.png" alt="로고" /></h1>
+			<p id="log_mnu"><span class="ai-user"></span></p>
+			
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#">개인</a></li>
+					<li><a href="#">국내선 예약</a></li>
+					<li><a href="#">국제선 예약</a></li>
+				</ul>
+			</div><!-- navbar 종료 -->
+		</div><!-- header 종료 -->
+		
+			<nav>
+			<ul>
+				<li>
+                    <label for="btn">
+                        <span class="ai-home"></span>
+                    </label>
+
+                    <label for="btn">
+                        <span class="ai-gear"></span>
+                    </label>
+                    
+				</li>
+				
+				<li><a href="#">예약/스케줄<span class="ai-plus"></span></a></li>
+				<li><a href="#">예약조회<span class="ai-plus"></span></a></li>
+				<li><a href="#">FLY&amp;STAMP<span class="ai-plus"></span></a></li>
+				<li><a href="#">FLY&amp;JOY<span class="ai-plus"></span></a></li>
+				<li><a href="#">서비스안내<span class="ai-plus"></span></a></li>
+				<li><a href="#">고객센터<span class="ai-plus"></span></a></li>
+				<li><a href="#">모바일 전용 기능 안내<span class="ai-plus"></span></a></li>
+			</ul>
+		</nav>
+	
+		<div id="color">
+            <div data-role="content">
+                <div id="section">
+                    <div class="flexslider">
+                      <ul class="slides">
+                        <li>
+                          <img src="./img/banner01.jpg" />
+                        </li>
+                        <li>
+                          <img src="./img/banner02.jpg" />
+                        </li>
+                        <li>
+                          <img src="./img/banner03.jpg" />
+                        </li>
+                        <li>
+                          <img src="./img/banner04.jpg" />
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div id="img01">
+                        <img src="./img/m_img01.jpg" />
+                    </div>
+                     <div id="img02">
+                        <img src="./img/m_img02.jpg" />
+                    </div>
+                     <div id="img03">
+                        <img src="./img/m_img05.jpg" />
+                    </div>
+                     <div id="img04">
+                        <img src="./img/m_img04.jpg" />
+                    </div>
+                     <div id="img05">
+                        <img src="./img/m_img05.jpg" />
+                    </div>
+                </div>
+                <div id="sky">
+                    <img src="./img/skypass.jpg" />
+                </div>
+             </div>
+		</div>
+		<div data-role="footer" data-theme="f" id="last">
+			<div id="login">
+				<ul>
+					<li><a href="#"><b>개인정보취급방침</b></a></li>
+					<li><a href="#">pc 버전 보기</a></li>
+					<li><a href="#">앱 다운로드</a></li>
+				</ul>
+			</div>
+            <p>Copyright 2016 KOREAN AIR Rights Reserved.</p>
+		</div>
+	</div>
+</body>
+</html>

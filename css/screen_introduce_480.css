@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+#wrapper {width:100%;height:100%;}
+header {position:relative;background: no-repeat #fee4cd center;height:716px;box-shadow:5px 8px 35px rgba(0,0,0,0.34);}
+header h1 {float:left;width:45px;padding-top:25px;box-sizing:border-box;margin-left:2vw;}
+header h1 img{width:45px;}
+
+
+header > ul {float:right;padding-top:40px;box-sizing:border-box;margin-right:8%;}
+header > ul > li {float:left;margin-left:2vw;width:18vw;text-align:center;}
+header > ul > li:nth-of-type(1) {margin:0;}
+header > ul > li > a {color:#000000;font-weight:400;font-size:3.5vw;}
+
+
+header #main_img{position:absolute;bottom:0;right:0%;}
+header #main_img img {display:inline-block;width:450px;text-align:center;}
+header #fontgroup {width:254px;margin:0;position:absolute;left:50%;margin-left:-127px;overflow:inherit;}
+header #fontgroup h2 {position:absolute;top:0;left:0;width:100%;font-size:40px;}
+#fontgroup h3 {display:none;}
+#fontgroup ul {display:none;}
+
+
+section {background:#ffffff;}
+section #section_wrap {width:100%;}
+
+#profile #profile_area_font img {position:absolute;top:0;left:50%;width:370px;margin-left:-185px;}
+#profile #profile_area_font{width:400px;height:980px;}
+#profile #profile_area_font p {padding:0;padding-top:400px;}
+
+
+
+
+#skill #graphic {position:relative;width:400px;height:330px;margin:0 auto;margin-top:100px;opacity:0;}
+#skill #graphic.view {position:relative;width:400px;height:330px;margin:0 auto;margin-top:100px;opacity:1;transition:0.5s;}
+
+#skill .skill_box{width:200px;height:330px;text-align:center;float:left;margin-left:0;outline:1px solid #000000;}
+#skill #graphic .circle {width:200px;height:200px;text-align:center;margin-top:30px;margin-bottom:10px;box-sizing:border-box;outline:1px solid #000000;}
+#skill #graphic .skill_box:nth-of-type(1) {margin-left:0;position:static;}
+#skill #graphic .skill_box:nth-of-type(2) {margin-left:0;position:static;}
+#skill #graphic .skill_box:nth-of-type(3) {margin-left:0;position:static;}
+#skill #graphic .skill_box:nth-of-type(4) {margin-left:0;position:static;}
+#skill #graphic .skill_box p:nth-of-type(1) {font-weight:bold;}
+
+
+#life {width:400px;margin:0 auto;padding-bottom:50px;padding-top:50px;overflow:hidden;}
+#life h2 {text-align:center;margin-bottom:50px;}
+/*
+
+#life #lifebox01 img {clear:both;}
+#life #lifebox02 img {clear:both;}
+*/
+
+
+
+
+#life #lifebox01 {overflow:hidden;display:block;clear:both;}
+#life #lifebox01 img {float:none;}
+#life #lifebox01 dl {text-align:justify;float:none;box-sizing:border-box;width:400px;height:240px;margin-left:0;margin-top:20px;}
+
+#life #lifebox02 {background:#fee4cd;display:block;height:700px;}
+#life #lifebox02 dl {float:none;background:#fee4cd;width:90%;margin:0 auto;}
+#life #lifebox02 dt {margin-top:20px;}
+#life #lifebox02 img {float:none;background:#fee4cd;width:90%;margin:90px auto;display:block;}
+
+#life #lifebox03 {overflow:hidden;display:block;clear:both;}
+#life #lifebox03 img {float:none;}
+#life #lifebox03 dl {text-align:justify;float:none;box-sizing:border-box;width:400px;height:240px;margin-left:0;margin-top:20px;}
+
+#life #lifebox04 {background:#fee4cd;display:block;height:600px;}
+#life #lifebox04 dl {float:none;background:#fee4cd;width:90%;margin:0 auto;}
+#life #lifebox04 dt {margin-top:20px;}
+#life #lifebox04 img {float:none;background:#fee4cd;width:90%;margin:90px auto;display:block;}
+
+
+#hashtag #h01{display:none;}
+#hashtag #h02{display:none;}
+#hashtag #h03{display:block;width:400px;margin:0 auto;}
+
+#manual {width:400px;margin:0 auto;}
+#manual #manual100 {display:none;}
+#manual #manual480 {display:block;margin:100px 0;}
+
+#manual #manual_img{display:none;}
+#manual #manual_font{display:none;}
+
+#manual #manual_img02 {display:none;}
+#manual #manual_img03 {display:block;}
+
+#swot #swotimg {display:none;}
+#swot img#swotimg02 {display:none;}
+#swot img#swotimg03 {display:inline-block;width:400px;text-align:center;margin-bottom:100px;}
+
+
+footer ul li:nth-of-type(1) { display:none; }		
+footer ul li:nth-of-type(2) { display:none; }	
+footer ul li:nth-of-type(3) { display:none; }
+
+
+
+
+
+

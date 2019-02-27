@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">		
+	<title>Logo</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/others.css">
+	<link rel="stylesheet" href="css/font.css">
+	
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width:1200px)"  href="css/screen_others_1200.css">
+	<link rel="stylesheet" type="text/css" media="only screen and (max-width:480px)"  href="css/screen_others_480.css">
+	
+	<style>
+		#wrapper { height:100%; }
+		.wrap { position:relative; height:100%; }
+
+
+		@media all and ( max-width:1200px ) {
+
+		}
+
+		@media all and ( max-width:480px ) {
+			
+		}		
+	</style>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script>
+        $(function(){
+            $("#wrapper header > ul > li:eq(0)").mouseenter(function(){
+                $('a',this).text("포트폴리오");
+                return false;
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseenter(function(){
+                $('a',this).text("자기소개");
+                return false;
+            });
+            $("#wrapper header > ul > li:eq(2)").mouseenter(function(){
+                $('a',this).text("에필로그");
+                return false;
+            });
+            
+            
+            $("#wrapper header > ul > li:eq(0)").mouseleave(function(){
+                $('a',this).text("설레는");
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseleave(function(){
+                $('a',this).text("두근거리는");
+            });
+            
+            $("#wrapper header > ul > li:eq(2)").mouseleave(function(){
+                $('a',this).text("달달한");
+            });
+            
+            
+            
+            var winHeight = $(window).height();
+    
+              $("#topbutton").click(function(){
+                $("html,body").animate({scrollTop:0});
+            });
+          
+            
+            $(window).scroll(function(){
+				var scrPos = $(window).scrollTop();
+				if( scrPos > 3500) {
+					$("#design_wrap #intro img:eq(1)").addClass("view");
+				}
+                if(scrPos > winHeight) {
+                    //정해진 컴퓨터 화면보다 스크롤 값이 커지면 보여라.
+                    $("#topbutton").stop().addClass("view");
+                    return false;
+                }else {
+                    $("#topbutton").stop().removeClass("view");
+                    return false;
+                }
+			})
+        });
+    </script>
+</head>
+<body>
+	<div id="wrapper">
+        <header>
+   
+                <h1><a href="index.html"><img src="img/logo.png"></a></h1>   
+                <ul>
+                    <li><a href="gallery.html">설레는</a></li>
+                    <li><a href="introduce.html">두근거리는</a></li>
+                    <li><a href="epilogue.html">달달한</a></li>
+                </ul>
+
+            <hgroup>
+                <h3>others</h3>
+                <h2>VARIOUS</h2>
+                <h4>Various Design</h4>
+            </hgroup>
+            <button>
+                <p><a href="artwork.html">prev</a></p>
+                <p><a href="dtp.html">next</a></p>
+            </button>
+            <div id="quickmenu">
+                <ul>
+                    <li><a href="mobileux.html">U</a></li>
+                    <li><a href="bobi.html">W<sup>1</sup></a></li>
+                    <li><a href="smeg.html">W<sup>2</sup></a></li>
+                    <li><a href="project.html">P</a></li>
+                    <li><a href="logo.html">L</a></li>
+                    <li><a href="cording.html">C</a></li>
+                    <li><a href="artwork.html">A</a></li>
+                    <li><a href="others.html">O<span></span></a></li>
+                    <li><a href="dtp.html">D</a></li>
+                </ul>
+            </div>
+            <div id="logo_sign">
+                <img src="img/others_poster.png">
+            </div>
+        </header>
+        <div id="colorbox"></div>
+        
+        
+        
+        <div id="planpurpose">
+           <hgroup>
+                <h2>PLAN <span>PURPOSE</span></h2>
+                <p>
+                웹 상에서 필요한 쇼핑몰 메인 배너, 아동복 디자인 배너, 보석 브랜드 디자인<br>배너, 카메라 브랜드 디자인 배너, 콜더플레이 디자인 배너 등 여러개의 배너를<br> 여러 상황에 맞게 실무에 투입되면 바로 할 수 있도록 했습니다.
+                </p>
+            </hgroup>
+        </div>
+
+        <div id="design">
+            <h2><span>DESIGN</span></h2>
+            <div id="design_bottom">
+              <img id="o_b" src="img/others_bottom.png">
+              <img id="o_b_480" src="img/others_bottom_480.png">
+            </div>
+        </div>
+        
+        
+        <footer>
+            <ul>
+                <li><a href="tel:010-7767-0891">TEL : 010-7767-0891</a></li>
+                <li><a href="mailto:sjqnfl90@naver.com">E-MAIL : sjqnfl90@naver.com</a></li>
+                <li><a href="http://lovelydesigner.co.kr">HOMPAGE : lovelydesigner.co.kr</a></li>
+                <li><a href="#">이 사이트는 chorme에 최적화 되어 있습니다.</a></li>
+            </ul>
+        </footer>
+	</div>
+	<div id="topbutton">
+	    <a href="#"><img src="img/top_button.png"></a>
+	</div>
+</body>
+</html>
+<!--
+중요한 제목 같은 것이 있으면 dl dt dd
+작고 비슷한 사각형 : ul li
+-->

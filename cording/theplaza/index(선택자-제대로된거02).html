@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Document</title>
+    <style>
+        li{list-style:none;}
+        h1{background:yellow;}
+        .box{width:100px;height:100px;float:left;margin:10px;}
+        ul li:nth-child(1){background:blue;}
+        ul li:nth-child(2){background:pink;}
+        ul li:nth-child(3){background:orange;}
+        p{background:lime;}
+        
+/*        h1:hover~p:nth-of-type(1){background:black;}*/
+        
+        ul>li:nth-of-type(1) ul li:nth-of-type(2){background:red}
+        ul>li:nth-of-type(3) {background-color:blueviolet}
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li class="box">
+            <ul>
+                <li>자식</li>
+                <li id="clide02">자식2</li>
+                <li id="clide03">자식3</li>
+            </ul>
+        </li>
+        <li class="box"></li>
+        <li class="box">
+            <ul>
+                <li>자식4</li>
+                <li id="clide05">자식5</li>
+                <li id="clide06">자식6</li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>

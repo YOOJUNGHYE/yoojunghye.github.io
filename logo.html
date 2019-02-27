@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">		
+	<title>Logo</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/logo.css">
+	<link rel="stylesheet" href="css/font.css">
+	
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width:1200px)"  href="css/screen_logo_1200.css">
+	<link rel="stylesheet" type="text/css" media="only screen and (max-width:480px)"  href="css/screen_logo_480.css">
+	
+	
+	<style>
+		#wrapper { height:100%; }
+		.wrap { position:relative; height:100%; }
+
+
+		@media all and ( max-width:1200px ) {
+
+		}
+
+		@media all and ( max-width:480px ) {
+			
+		}		
+	</style>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script>
+        $(function(){
+            $("#wrapper header > ul > li:eq(0)").mouseenter(function(){
+                $('a',this).text("포트폴리오");
+                return false;
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseenter(function(){
+                $('a',this).text("자기소개");
+                return false;
+            });
+            $("#wrapper header > ul > li:eq(2)").mouseenter(function(){
+                $('a',this).text("에필로그");
+                return false;
+            });
+            
+            
+            $("#wrapper header > ul > li:eq(0)").mouseleave(function(){
+                $('a',this).text("설레는");
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseleave(function(){
+                $('a',this).text("두근거리는");
+            });
+            
+            $("#wrapper header > ul > li:eq(2)").mouseleave(function(){
+                $('a',this).text("달달한");
+            });
+            
+            
+            
+            var winHeight = $(window).height();
+    
+              $("#topbutton").click(function(){
+                $("html,body").animate({scrollTop:0});
+            });
+          
+            
+            $(window).scroll(function(){
+				var scrPos = $(window).scrollTop();
+				if( scrPos > 3500) {
+					$("#design_wrap #intro img:eq(1)").addClass("view");
+				}
+                if(scrPos > winHeight) {
+                    //정해진 컴퓨터 화면보다 스크롤 값이 커지면 보여라.
+                    $("#topbutton").stop().addClass("view");
+                    return false;
+                }else {
+                    $("#topbutton").stop().removeClass("view");
+                    return false;
+                }
+			})
+        });
+    </script>
+</head>
+<body>
+	<div id="wrapper">
+        <header>
+   
+                <h1><a href="index.html"><img src="img/logo.png"></a></h1>   
+                <ul>
+                    <li><a href="gallery.html">설레는</a></li>
+                    <li><a href="introduce.html">두근거리는</a></li>
+                    <li><a href="epilogue.html">달달한</a></li>
+                </ul>
+
+            <hgroup>
+                <h3>Logo <span>Design</span></h3>
+                <h2>VARIOUS</h2>
+                <h4>Various Design</h4>
+            </hgroup>
+            <button>
+                <p><a href="project.html">prev</a></p>
+                <p><a href="cording.html">next</a></p>
+            </button>
+            <div id="quickmenu">
+                <ul>
+                    <li><a href="mobileux.html">U</a></li>
+                    <li><a href="bobi.html">W<sup>1</sup></a></li>
+                    <li><a href="smeg.html">W<sup>2</sup></a></li>
+                    <li><a href="project.html">P</a></li>
+                    <li><a href="logo.html">L<span></span></a></li>
+                    <li><a href="cording.html">C</a></li>
+                    <li><a href="artwork.html">A</a></li>
+                    <li><a href="others.html">O</a></li>
+                    <li><a href="dtp.html">D</a></li>
+                </ul>
+            </div>
+            <div id="logo_sign">
+                <img src="img/logo_sign.png">
+            </div>
+        </header>
+        <div id="colorbox"></div>
+        
+        
+        
+        <div id="planpurpose">
+           <hgroup>
+                <h2>PLAN <span>PURPOSE</span></h2>
+                <p>
+                    제성격의 장점의 키워드 4가지 - 사교적인, 사랑스러운, 에너제틱한, 반전있는 에서 로고를<br>생각하게 되었습니다. 결과적으로 종합해 보면 강아지와 닮은 성격이였습니다. 그래서 강아지를<br>형상화해서 로고를 제작했습니다. 
+                </p>
+            </hgroup>
+        </div>
+
+        <div id="identity">
+           <div id="identity_wrap">
+                <h2><span>IDENTITY</span></h2>
+                <div id="color">
+                   <p>color</p>
+                   <hr>
+                    <ul>
+                        <li><a href="#">#000000</a></li>
+                        <li><a href="#">#f16e6e</a></li>
+                    </ul>
+                </div>
+                <div id="logo">
+                    <p>Logo</p>
+                    <hr>
+                    <div id="logo_align">
+                    <img src="img/logo_logo.png">
+                    <p id="logo_ex">
+                       강아지 코에서 착안하여 로고를 제작하였고,<br> 
+                       사랑스러운 이라는 것을 강조하기 위해 <br>
+                       가운데 하트를 넣어 포인트를 주었습니다.
+                   </p>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div id="design">
+            <h2><span>DESIGN</span></h2>
+            <div id="design_bottom">
+              <img id="l_d_b" src="img/logo_design_bottom.png">
+              <img id="l_d_b_480" src="img/logo_design_bottom_480.png">
+            </div>
+        </div>
+        
+        
+        
+        <div id="planpurpose02">
+           <hgroup>
+                <h2>PLAN <span>PURPOSE</span></h2>
+                <p>
+                    세상의 ‘하나 뿐인 너 ’ 라는 의미의  You In One  은 우리가 흔히 알고 있는 동물 유인원이라고도<br>읽히기 쉽습니다. 그래서 동물의 형태를 연상하여 로고를 희화화하여 유인원형태 로고를<br>만들었습니다. 유인원은 두가지 형태로 첫째로는 로고가 따로 있고 옆에 폰트가 존재하는 형태가<br>있습니다. 두번째 형태로는 유인원 형태 안에 맞춰 폰트가 유연하게 움직있는 형태가 있습니다.
+                </p>
+            </hgroup>
+        </div>
+
+        <div id="identity02">
+           <div id="identity_wrap02">
+                <h2><span>IDENTITY</span></h2>
+                <div id="color02">
+                   <p>color</p>
+                   <hr>
+                    <ul>
+                        <li><a href="#">#000000</a></li>
+                    </ul>
+                </div>
+                <div id="logo02">
+                    <p>Logo</p>
+                    <hr>
+                    <div id="logo_align02">
+                    <img id="l_y" src="img/logo_youinone.png">
+                    <img id="l_y_480" src="img/logo_youinone_480.png">
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div id="design02">
+            <h2><span>DESIGN</span></h2>
+            <div id="design_bottom02">
+              <img id="y_d_b" src="img/youinone_design_bottom.png">
+              <img id="y_d_b_480" src="img/youinone_design_bottom_480.png">
+            </div>
+        </div>
+        
+        <div id="planpurpose03">
+           <hgroup>
+                <h2>PLAN <span>PURPOSE</span></h2>
+                <p>
+이름에서 착안한 두가지 로고를 소개하려고 합니다. 첫번째 토끼 로고는 제 영문 이름의 맨처음 성인 YOO<br>에서 따와 두눈과 토끼입을 만들었습니다. 두번째 세모와 동그라미로고는 제 한글 이름에서 철자인ㅇㅈㅎ이<br>읽히게끔 만든 로고입니다.
+                </p>
+            </hgroup>
+        </div>
+
+        <div id="identity03">
+           <div id="identity_wrap03">
+                <h2><span>IDENTITY</span></h2>
+                <div id="color03">
+                   <p>color</p>
+                   <hr>
+                    <ul>
+                        <li><a href="#">#000000</a></li>
+                    </ul>
+                </div>
+                <div id="logo03">
+                    <p>Logo</p>
+                    <hr>
+                    <div id="logo_align03">
+                    <img id="l_yjh" src="img/logo_yjh.png">
+                    <img id="l_yjh_480" src="img/logo_yjh_480.png">
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div id="design03">
+            <h2><span>DESIGN</span></h2>
+            <div id="design_bottom03">
+              <img id="yjh_b" src="img/yjh_design_bottom.png">
+              <img id="yjh_b_480" src="img/yjh_design_bottom_480.png">
+            </div>
+        </div>
+   
+        
+        
+        
+        
+        
+        <footer>
+            <ul>
+                <li><a href="tel:010-7767-0891">TEL : 010-7767-0891</a></li>
+                <li><a href="mailto:sjqnfl90@naver.com">E-MAIL : sjqnfl90@naver.com</a></li>
+                <li><a href="http://lovelydesigner.co.kr">HOMPAGE : lovelydesigner.co.kr</a></li>
+                <li><a href="#">이 사이트는 chorme에 최적화 되어 있습니다.</a></li>
+            </ul>
+        </footer>
+	</div>
+	<div id="topbutton">
+	    <a href="#"><img src="img/top_button.png"></a>
+	</div>
+</body>
+</html>
+<!--
+중요한 제목 같은 것이 있으면 dl dt dd
+작고 비슷한 사각형 : ul li
+-->

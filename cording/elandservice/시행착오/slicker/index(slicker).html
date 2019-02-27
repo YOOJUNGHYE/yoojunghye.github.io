@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slick Playground</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/slick.css">
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider { width: 1100px; margin: 100px auto; border:1px solid red; }
+    .slick-slide { width:530px; height:180px; margin:0 20px; border:1px solid blue;background:white;}
+
+
+
+    .slick-prev:before, .slick-next:before {  color: red; }
+
+    .slick-prev { position:absolute; width:50px; height:50px; background:black; border:none; z-index:100; top:200px; left:50%; margin-left:-55px; text-indent:-9999px; background-image:url(img/csv_arrow_prev.png); background-repeat:no-repeat; background-position:center; background-size:35%; }
+
+    .slick-next { position:absolute; width:50px; height:50px; background:black; border:none; z-index:100; top:200px; left:50%; margin-left:25px; text-indent:-9999px;background-image:url(img/csv_arrow_next.png); background-repeat:no-repeat; background-position:center; background-size:35%;}
+      
+      
+      .regular dl {float:left;width:280px;letter-spacing:-1px;}  
+      .regular p {float:left;}
+      
+  </style>
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script>
+    $(function() {      
+      $(".regular").slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      });
+    });
+</script>
+</head>
+<body>
+  <section class="regular slider">
+    <div>
+        <dl>
+          <dt>이랜드서비스 독산사옥안내 </dt>
+          <dd>이랜드서브스 독산 안내 저희 이랜드 서비스는 2018년 독산 사옥 통합이전을</dd>
+          <dd>2018-04-25</dd>
+        </dl>
+        <p><img src="img/list_04.jpg" alt=""/></p>
+    </div>
+    <div>
+         <dl>
+          <dt>이랜드서비스 독산사옥안내 </dt>
+          <dd>이랜드서브스 독산 안내 저희 이랜드 서비스는 2018년 독산 사옥 통합이전을</dd>
+          <dd>2018-04-25</dd>
+        </dl>
+        <p><img src="img/_MG_0127_thumb.jpg" alt=""/></p>     
+    </div>
+    <div>
+         <dl>
+          <dt>이랜드서비스 독산사옥안내 </dt>
+          <dd>이랜드서브스 독산 안내 저희 이랜드 서비스는 2018년 독산 사옥 통합이전을</dd>
+          <dd>2018-04-25</dd>
+        </dl>
+        <p><img src="img/슬라이드9_thumb.jpg" alt=""/></p>     
+    </div>
+    <div>
+         <dl>
+          <dt>이랜드서비스 독산사옥안내 </dt>
+          <dd>이랜드서브스 독산 안내 저희 이랜드 서비스는 2018년 독산 사옥 통합이전을</dd>
+          <dd>2018-04-25</dd>
+        </dl>
+        <p><img src="img/엄마1_thumb.jpg" alt=""/></p>    
+    </div>
+  </section>
+
+  
+
+</body>
+</html>

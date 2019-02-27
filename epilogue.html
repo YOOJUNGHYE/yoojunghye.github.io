@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">		
+	<title>Epilogue</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/epilogue.css">
+	<link rel="stylesheet" href="css/font.css">
+	
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width:1200px)"  href="css/screen_epilogue_1200.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width:480px)"  href="css/screen_epilogue_480.css">
+	
+	
+	<style>
+		#wrapper { height:100%; }
+		.wrap { position:relative; height:100%; }
+
+
+		@media all and ( max-width:1200px ) {
+
+		}
+
+		@media all and ( max-width:480px ) {
+			
+		}		
+	</style>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/circle.js"></script>
+	<script>
+        $(function(){
+            $("#wrapper header > ul > li:eq(0)").mouseenter(function(){
+                $('a',this).text("포트폴리오");
+                return false;
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseenter(function(){
+                $('a',this).text("자기소개");
+                return false;
+            });
+            $("#wrapper header > ul > li:eq(2)").mouseenter(function(){
+                $('a',this).text("에필로그");
+                return false;
+            });
+            
+            
+            $("#wrapper header > ul > li:eq(0)").mouseleave(function(){
+                $('a',this).text("설레는");
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseleave(function(){
+                $('a',this).text("두근거리는");
+            });
+            
+            $("#wrapper header > ul > li:eq(2)").mouseleave(function(){
+                $('a',this).text("달달한");
+            });
+            
+            
+            
+            var winHeight = $(window).height();
+    
+              $("#topbutton").click(function(){
+                $("html,body").animate({scrollTop:0});
+
+                  return false;
+            });
+          
+            
+            $(window).scroll(function(){
+				var scrPos = $(window).scrollTop();
+				if( scrPos > 1200){
+                   $("#skill #graphic").addClass("view");
+                }
+                if( scrPos > 1400) {
+                   $("#mystory #my_main").addClass("view") 
+                }
+                
+                if( scrPos > 4400) {
+					$("#manual #manual_img").addClass("view");
+				}
+                if(scrPos > winHeight) {
+                    //정해진 컴퓨터 화면보다 스크롤 값이 커지면 보여라.
+                    $("#topbutton").stop().addClass("view");
+                    return false;
+                }else {
+                    $("#topbutton").stop().removeClass("view");
+				$("#mystory #my_main").removeClass("view");                    
+                    return false;
+                }
+			});
+          
+            
+            
+        $('#fontgroup ul li:eq(1)').click(function(){
+
+            $('html,body').animate({scrollTop:762});
+            return false;
+        });
+        
+         $('#fontgroup ul li:eq(2)').click(function(){
+
+            $('html,body').animate({scrollTop:1600});
+            return false;
+        }); 
+            
+        $('#fontgroup ul li:eq(3)').click(function(){
+
+            $('html,body').animate({scrollTop:2920});
+            return false;
+        });  
+            
+        $('#fontgroup ul li:eq(4)').click(function(){
+
+            $('html,body').animate({scrollTop:3600});
+            return false;
+        });      
+
+            
+            
+            
+        var chkIndex =0;     
+        slideLoop();
+      
+        function slideLoop(){
+        timer = setInterval(function(){
+//           
+            chkIndex++;
+            chkIndex = chkIndex % 3; /*2번째방법*/
+             $("#slider:not(animate)").stop().animate({marginLeft:-1200*chkIndex});
+        },3000); 
+    }
+
+        $("#friend p#leftarrow").click(function(){
+            $("#friend p#leftarrow").css({opacity:1});
+            if(chkIndex > 0) {
+            chkIndex--;
+            $("#friend #slider:not(animate)").stop().animate({marginLeft:-1200*chkIndex});
+            } else{
+                $("#friend p#leftarrow").css({opacity:0.1})
+                return false; 
+            }
+
+        });
+      
+        $("#friend p#rightarrow").click(function(){
+            $("#friend p#rightarrow").css({opacity:1});
+            if(chkIndex < 2) {
+            chkIndex++;
+            $("#friend #slider:not(animate)").stop().animate({marginLeft:-1200*chkIndex});
+            } else{
+                $("#friend p#rightarrow").css({opacity:0.1})
+                return false; 
+            }
+
+        });
+            
+           
+            
+        //#hobby ul li 에 들어갔을때 4번째 이미지를 4번째 호버 이미지로 바꿔라.   
+         var hobbyhover04 = $('#h_hover li:eq(0) img').attr('src')
+         var hobbyhover06 = $('#h_hover li:eq(1) img').attr('src')
+         var hobbyhover09 = $('#h_hover li:eq(2) img').attr('src')
+         var hobbyhover12 = $('#h_hover li:eq(3) img').attr('src')
+           
+          var hobbyhover04_01 = $('ul#hobby_box li:eq(3) img').attr('src')
+          var hobbyhover06_01 = $('ul#hobby_box li:eq(5) img').attr('src')
+          var hobbyhover09_01 = $('ul#hobby_box li:eq(8) img').attr('src')
+          var hobbyhover12_01 = $('ul#hobby_box li:eq(11) img').attr('src')
+         
+         $("ul#hobby_box li:eq(3)").mouseenter(function(){
+             $('img',this).attr('src', hobbyhover04)
+             return false;
+         });  
+         
+        $("ul#hobby_box li:eq(3)").mouseleave(function(){
+             $('img',this).attr('src', hobbyhover04_01)
+             return false;
+         });               
+            
+
+         $("ul#hobby_box li:eq(5)").mouseenter(function(){
+             $('img',this).attr('src', hobbyhover06)
+             return false;
+         }); 
+            
+            
+        $("ul#hobby_box li:eq(5)").mouseleave(function(){
+             $('img',this).attr('src', hobbyhover06_01)
+             return false;
+         });             
+            
+            
+         $("ul#hobby_box li:eq(8)").mouseenter(function(){
+             $('img',this).attr('src', hobbyhover09)
+             return false;
+         }); 
+            
+        $("ul#hobby_box li:eq(8)").mouseleave(function(){
+             $('img',this).attr('src', hobbyhover09_01)
+             return false;
+         });  
+              
+         $("ul#hobby_box li:eq(11)").mouseenter(function(){
+             $('img',this).attr('src', hobbyhover12)
+             return false;
+         });            
+            
+        $("ul#hobby_box li:eq(11)").mouseleave(function(){
+             $('img',this).attr('src', hobbyhover12_01)
+             return false;
+         });    
+            
+                                
+    });
+    </script>
+</head>
+<body>
+	<div id="wrapper">
+        <header>
+   
+                <h1><a href="index.html"><img src="img/logo_black2.png"></a></h1>   
+                <ul>
+                    <li><a href="gallery.html">설레는</a></li>
+                    <li><a href="introduce.html">두근거리는</a></li>
+                    <li><a href="epilogue.html">달달한</a></li>
+                </ul>
+                
+
+            <div id="fontgroup">
+                <h2><span>달달한</span><br>에필로그<hr></h2>
+<!--                <h3><span>EPILOGUE</span><hr></h3>-->
+                <ul>
+                    <li><a href="#">CONTENTS</a></li>
+                    <li><a href="#">FUTURE PLAN</a></li>
+                    <li><a href="#">MY STORY</a></li>
+                    <li><a href="#">FRIENDS RATING</a></li>
+                    <li><a href="#">HOBBY &amp; DAILY LIFE</a></li>
+                </ul>
+            </div>
+            
+            <div id="main_img">
+                <img src="img/ep_main.png">
+            </div>
+            
+        </header>
+        <section>
+            <div id="section_wrap">
+               <div id="future" >
+                   <h2><a href="#"><img src="img/ep_futureplan.png"></a></h2>
+                   <div id="future_area">
+                       <div id="future_area_font">
+                          <img id="ep_f" src="img/ep_future.png">
+                           <p>
+<span>1년 후 :</span><br>원하는 회사에 입사하여 회사업무를 숙지하는데 최선을 다하고 있을 것입니다. 신입이지만, 열심히 하는 자세로 예쁨을 받고 있을 것입니다.<br>
+<span>2년 후 :</span><br>회사에 업무 이해를 한상태로, 2년 차 이지만 꾸준한 노력으로 3년차 못지 않은 사람이 되어있을 것입니다.<br>
+<span>3년 후 :</span><br>어느 정도 숙련 된 상태로 회사에 주요 업무를 담당하고,  또 그것을 잘 해결해 나가는 사람이 되어있을 것입니다.<br>
+<span>4년 후 :</span><br>항상 신입이 마음을 갖는 것이 어렵지만, 부족한 부분을 채워나가려는 노력을 게을리 하지 않는 사람이 되어있을 것 입니다.<br>
+<span>5년 후 :</span><br>서른 중반인 그 때쯤엔 경력 5년차의 웹&amp;모바일 UI / UX디자이너가 되어있을 것입니다. 클라이언트를 상대하는 것에 능숙하고, 또 원하는 것을 빨리 캐치해서 만족하는 작업 물을 만들어내는 사람이 되어있지 않을까 생각합니다.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+                
+                
+                <div id="mystory">
+                    <h2><a href="#"><img src="img/ep_story.png"></a></h2>
+                    <img id="my_main" src="img/ep_mystory.png">
+                    <img id="my_bg" src="img/ep_mystorybg.png">
+                    <img id="my_bg02" src="img/ep_mystorybg02.png">
+                </div>
+                
+                
+                
+                <div id="friend">
+                    <h2><a href="#"><img src="img/ep_friend.png"></a></h2>
+                    <div id="mask">
+                        
+                         <div id="slider">
+                              <img id="slider01" class="slide" src="img/ep_friendslider01.png">
+                              <img id="slider02" class="slide" src="img/ep_friendslider02.png">
+                              <img id="slider03" class="slide" src="img/ep_friendslider03.png">
+                        </div>
+                        <div id="slider_picture">
+                              <img id="slider05" class="slide01" src="img/ep_friendslider01.png">
+                              <img id="slider06" class="slide01" src="img/ep_friendslider02.png">
+                              <img id="slider07" class="slide01" src="img/ep_friendslider03.png">
+                        </div>
+                        <div id="slider_picture02">
+                              <img id="slider09" class="slide02" src="img/ep_friendslider02_1.png">
+                              <img id="slider11" class="slide02" src="img/ep_friendslider02_2.png">
+                              <img id="slider12" class="slide02" src="img/ep_friendslider02_3.png"> 
+                              <img id="slider13" class="slide02" src="img/ep_friendslider02_4.png">
+                              <img id="slider14" class="slide02" src="img/ep_friendslider02_5.png">       
+                              <img id="slider14" class="slide02" src="img/ep_friendslider02_6.png">                                         
+                        </div>                            
+
+                    </div>
+                    <p id="leftarrow" class="arrow"><img src="img/slide_left.png"></p>
+                    <p id="rightarrow" class="arrow"><img src="img/slide_right.png"></p>
+                </div>
+
+                <div id="hobby">
+                    <h2><a href="#"><img src="img/ep_hoppy.png"></a></h2>
+                    <ul id="hobby_box">
+                        <li class="left top"><img src="img/hoppy_01.png"></li>
+                        <li class="top"><img src="img/hoppy_02.png"></li>
+                        <li class="top"><img src="img/hoppy_03.png"></li>
+                        <li class="top"><img src="img/hoppy_04.png"></li>
+                        <li class="left"><img src="img/hoppy_05.png"></li>
+                        <li><img src="img/hoppy_06.png"></li>
+                        <li><img src="img/hoppy_07.png"></li>
+                        <li><img src="img/hoppy_08.png"></li>
+                        <li class="left"><img src="img/hoppy_09.png"></li>
+                        <li><img src="img/hoppy_10.png"></li>
+                        <li><img src="img/hoppy_11.png"></li>
+                        <li><img src="img/hoppy_12.png"></li>
+                    </ul>
+                    
+                    <ul id="h_hover">
+                        <li><img src="img/hoppy_04_hover.png"></li>
+                        <li><img src="img/hoppy_06_hover.png"></li>
+                        <li><img src="img/hoppy_09_hover.png"></li>
+                        <li><img src="img/hoppy_12_hover.png"></li>
+                    </ul>
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <footer>
+            <ul>
+                <li><a href="tel:010-7767-0891">TEL : 010-7767-0891</a></li>
+                <li><a href="mailto:sjqnfl90@naver.com">E-MAIL : sjqnfl90@naver.com</a></li>
+                <li><a href="http://lovelydesigner.co.kr">HOMPAGE : lovelydesigner.co.kr</a></li>
+                <li><a href="#">이 사이트는 chorme에 최적화 되어 있습니다.</a></li>
+            </ul>
+        </footer>
+	</div>
+	<div id="topbutton">
+	    <a href="#"><img src="img/top_button.png"></a>
+	</div>
+</body>
+</html>
+<!--
+중요한 제목 같은 것이 있으면 dl dt dd
+작고 비슷한 사각형 : ul li
+-->

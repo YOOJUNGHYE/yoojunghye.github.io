@@ -1,0 +1,29 @@
+
+@charset "utf-8";
+
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Bd';
+  src: url('../webfont/HelveticaNeueLTStd-Bd.eot?#iefix') format('embedded-opentype'),  url('../webfont/HelveticaNeueLTStd-Bd.otf')  format('opentype'),
+	     url('../webfont/HelveticaNeueLTStd-Bd.woff') format('woff'), url('../webfont/HelveticaNeueLTStd-Bd.ttf')  format('truetype'), url('../webfont/HelveticaNeueLTStd-Bd.svg#HelveticaNeueLTStd-Bd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Md';
+  src: url('../webfont/HelveticaNeueLTStd-Md.eot?#iefix') format('embedded-opentype'),  url('../webfont/HelveticaNeueLTStd-Md.otf')  format('opentype'),
+	     url('../webfont/HelveticaNeueLTStd-Md.woff') format('woff'), url('../webfont/HelveticaNeueLTStd-Md.ttf')  format('truetype'), url('../webfont/HelveticaNeueLTStd-Md.svg#HelveticaNeueLTStd-Md') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'HelveticaNeueLTStd-Roman';
+  src: url('../webfont/HelveticaNeueLTStd-Roman.eot?#iefix') format('embedded-opentype'),  url('../webfont/HelveticaNeueLTStd-Roman.otf')  format('opentype'),
+	     url('../webfont/HelveticaNeueLTStd-Roman.woff') format('woff'), url('../webfont/HelveticaNeueLTStd-Roman.ttf')  format('truetype'), url('../webfont/HelveticaNeueLTStd-Roman.svg#HelveticaNeueLTStd-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

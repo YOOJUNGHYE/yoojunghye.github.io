@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Document</title>
+    <style>
+        li{list-style:none;}
+        h1{background:yellow;}
+        .box{width:100px;height:100px;float:left;margin:10px;}
+        ul li:nth-child(1){background:blue;}
+        ul li:nth-child(2){background:pink;}
+        ul li:nth-child(3){background:orange;}
+        p{background:lime;}
+        
+/*        h1:hover~p:nth-of-type(1){background:black;}*/
+        
+        ul li:nth-of-type(1) ul li:nth-of-type(2){background:red}
+/*
+        
+        여기서는 꺽쇠를 해도 부모가 없기 때문에 종속 선택자와 같이 선택이 된다.
+        ul > li:nth-of-type(1)을 하면 그래서 첫번째 박스와 자식이 선택이 된다.
+        그러나 body>li:nth-of-type이라는 body의 부모를 주면, 첫번쨰 박스 만 선택됨.
+        
+        ul > li:nth-of-type(1) {background-color:orange;}
+        ul li:nth-of-type(1) {background-color:orange;}
+*/
+        body > ul > li:nth-of-type(3) {background-color:blueviolet}
+    </style>
+</head>
+<body>
+    <h1 class="box">logo</h1>
+    <h1 class="box">logo2</h1>
+    <ul>
+        <li class="box">
+            <ul>
+                <li>자식</li>
+                <li id="clide02">자식2</li>
+                <li id="clide03">자식3</li>
+            </ul>
+        </li>
+        <li class="box"></li>
+        <li class="box"></li>
+    </ul>
+    <p class="box">내용</p>
+    <p class="box">내용2</p>
+</body>
+</html>
+<!--
+nth-child : 전체적인 순서 (곤충중에 몇번째냐)
+nth-of-type : 지정한 것 중에 순서(개미 중에 몇번째냐, 무당벌레 중에 몇번째냐, 태그중에 몇번째냐
+-->

@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+#wrapper {width:100%;height:100%;}
+header {position:relative;background: no-repeat #fbad99 center;height:716px;box-shadow:5px 8px 35px rgba(0,0,0,0.34);}
+header h1 {float:left;width:45px;padding-top:25px;box-sizing:border-box;margin-left:2vw;}
+header h1 img{width:45px;}
+
+header > ul {float:right;padding-top:40px;box-sizing:border-box;margin-right:8%;}
+header > ul > li {float:left;margin-left:2vw;width:18vw;text-align:center;}
+header > ul > li:nth-of-type(1) {margin:0;}
+header > ul > li > a {color:#000000;font-weight:400;font-size:3.5vw;}
+
+header #main_img{position:absolute;bottom:0;left:0%;}
+header #main_img img {display:inline-block;width:450px;text-align:center;}
+header #fontgroup {width:254px;margin:0;position:absolute;left:50%;margin-left:-127px;overflow:inherit;height:150px;}
+header #fontgroup h2 {position:absolute;top:0;left:0;width:100%;font-size:40px;}
+#fontgroup h3 {display:none;}
+#fontgroup ul {display:none;}
+
+section {background:#ffffff;}
+section #section_wrap {width:100%;}
+
+/*
+section {background:#ffffff;}
+section #section_wrap {width:100%;}
+
+#profile #profile_area_font img {position:absolute;top:0;left:50%;width:370px;margin-left:-185px;}
+#profile #profile_area_font{width:400px;height:980px;}
+#profile #profile_area_font p {padding:0;padding-top:400px;}*/
+
+#future #future_area_font {width:400px;margin:0 auto;text-align:center;}
+#future #future_area_font img {position:static;width:100%;}
+
+#future #future_area_font p {padding:0;margin:0;width:370px;margin-top:100px;text-align:left;background:#fdf7f1;}
+
+#mystory {margin-top:600px;text-align:center;}
+    
+#mystory #my_main {display:none;}
+#mystory #my_main.view {display:none;}
+#mystory #my_bg {display:none;}  
+#mystory #my_bg02 {display:inline-block;}    
+ 
+
+#friend #mask {width:380px;}
+#friend #slider_picture {display:none;}    
+#friend #slider_picture02 {display:block;width:380px;margin:0 auto;}
+    
+    
+#friend #slider_picture02 img {display:block;}
+
+#hobby {margin-top:3150px;}
+#hobby #hobby_box {width:278px;}
+#hobby ul#hobby_box li {float:none;margin:0;}
+
+
+footer ul li:nth-of-type(1) { display:none; }		
+footer ul li:nth-of-type(2) { display:none; }	
+footer ul li:nth-of-type(3) { display:none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

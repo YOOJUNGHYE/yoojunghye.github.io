@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+   <!--이렇게 ▲위에 lang="ko"부터 meta name까지 다 준비하고, 스타일시트 reset.css연결하는게 기본준비입니닷★★-->
+    <title>ELAND SERVICE</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .wrap {width:100%;height:100%;padding-top:300px;box-sizing:border-box;}
+        #page01 {background:orange;}
+        #page02 {background:pink;}
+        .wrap h2 {text-align:center;color:white;font-size:50px;}
+/*
+        #page02 h2{opacity:0;margin-top:50px;}
+        #page02 h2.view{transform:translateY(-50px);opacity:1;transition:all 1s;}
+        
+*/
+        
+        #page01 h2,#page02 h2{opacity:0;margin-top:50px;}
+        #page01 h2.view {transform:translateY(-50px);opacity:1;transition:all 1s;}
+        #page02 h2.view {transform:translateY(-50px);opacity:1;transition:all 1s;}
+        
+    </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+
+    
+
+            var winHeight = $(window).height(); 
+        
+        
+            $("#page01 h2").addClass('view');    
+        
+            $(window).scroll(function(){
+            var scPos = $(window).scrollTop();
+                    
+            if (scPos > winHeight - 100){
+                $("#page01 h2").removeClass("view"); 
+                $("#page02 h2").addClass("view"); 
+            }else if (scPos == 0){
+                $("#page01 h2").addClass('view'); 
+                $("#page02 h2").removeClass("view");
+            }
+        });
+        
+        
+
+
+            
+        $(".wrap").mousewheel(function(e, delta){
+            currentTop = $(this).offset().top;/*해당 페이지의 위치값!(마진탑의 위치값..?)*/
+            if (delta > 0){ /*delta=마우스 휠을 위로 돌리면 마이너스가 실행되고..*/
+                $("html,body").stop().animate({scrollTop: currentTop - winHeight},1000,"easeInOutQuart");
+                return false;
+            }else{/*delta=마우스 휠을 반대로(아래로)돌리면 플러스로 실행돼라..*/
+                $("html,body").stop().animate({scrollTop: currentTop + winHeight},1000,"easeInOutQuart");
+                return false;
+            }/*마우스 스크롤할때 딱딱 걸리는 효과*/
+            
+            $(window).resize(function(){
+                winHeight=$(window).height();
+            });/*윈도우 사이즈에 맞춰서 높이값도 바꿔 맞춰라(윈도우값이 작아지면 작아지고..)*/
+        });
+    });
+    </script>
+</head>
+<body>
+
+        <div id="page01" class="wrap">
+            <h2>소개하는 페이지 입니다.</h2>
+        </div>
+        <div id="page02" class="wrap">
+            <h2>사업분야 페이지 입니다.</h2>
+        </div>
+ 
+</body>
+</html>

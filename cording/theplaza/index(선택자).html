@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <style>
+        *{margin:0;padding:0;}
+        li {list-style:none;}
+        a {text-decoration:none;}
+        h1 {background:purple;}
+        
+        .box{width:100px;height:100px;float:left;margin:10px;}
+        ul li:nth-child(3){background:pink;}
+        ul li:nth-child(4){background:orange;}
+        ul li:nth-child(5){background:blue;}
+        p {background:lime;}
+        
+    
+        
+/*        인접선택자 - 내 바로 밑에 형제만 선택 가능  */
+/*        h1:hover + #box01{background:pink;} */
+
+/*        순서선택자*/
+/*         h1:nth-child(1) {background:skyblue;}*/
+        
+/*        nth-child는 몇번째 놓여있는 태그 인지가 중요한 것이다. 따라서 .box 클레스 박스 로 된것 중에 순서만 생각한다. 즉, nth-child는 순서만 관심있어 한다.*/
+        
+/*
+        p:nth-of-type(?)은 p태그 중에 뭐라고 정해주면 된다.
+        p:nth-of-type(2) {background:black;}
+*/
+        
+        h1:hover ~ p:nth-of-type(1) {background:black;}
+/*        ul안에있는 자식중에 첫번째타입을 나타냄 그 안에 있는 모든 ul 중에 두번째 선택자*/
+        ul li:nth-of-type(1) ul li:nth-of-type(2) {background:lime;}
+        
+        ul li:nth-of-type(3) {background-color:aqua;}
+
+        
+    </style>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script>
+        $(function(){
+  
+           
+        });
+    </script>
+</head>
+<body>
+   <h1 class="box">logo1</h1>
+   <h1 class="box">logo2</h1>
+    <ul>
+        <li class="box">
+            <ul>
+                <li>자식1</li>
+                <li>자식2</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="box">내용1</p>
+    <p class="box">내용2</p>
+</body>
+</html>
+
+<!--
+    png   
+    1. 투명한 이미지
+    2. 고화질 이미지
+    
+    jpg
+    용량이 작은 이미지
+    
+    gif
+    움직이는 이미지
+-->
+<!--
+우선순위가 있느 작고 비슷한 사각형 dl/dt/dd
+작고 똑같은 것이 반복되면 li
+-->
+<!--이미지를 다른이름으로 저장이라고 뜨면 background로 안깔은 것이고, 그냥 다른이름으로 저장은 background로 깔았다는 것이다.-->

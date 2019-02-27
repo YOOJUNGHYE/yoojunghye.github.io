@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+
+
+
+/*svg*/
+svg {position:absolute;z-index:1;width:268px;height:260px;left:15px;top:19px;display:none;}
+
+
+/*header*/
+header {width:100%;height:107px;position:fixed;top:0;left:0;z-index:100;}
+
+/*header nav#link - 상단 링크 메뉴*/
+header nav#uxlink {height:41px;background:black;}
+header nav#uxlink ol {float:right;}
+header nav#uxlink ol li {width:78px;color:#e2e2e2;float:left;font-size:10px;height:41px;line-height:41px;border-left:1px solid #333333;text-align:center;}
+header nav#uxlink ol li.info {border-left:none;}
+header nav#uxlink ol li:nth-of-type(6) {width:86px;background:url(../img/icon_select.jpg) no-repeat 65px center;}
+header nav#uxlink ol li a {display:block;width:78px;height:41px;color:#e2e2e2;}
+
+/*
+
+background쓰는것
+1.반복되는 이미지
+2.hover처리 될때
+3.딱봐도 background일때
+*/
+
+/*header nav#uxmain-메인메뉴*/
+header nav#uxmain {height:68px;background:white;}
+header nav#uxmain h1 {float:left;margin-left:52px;margin-right:56px;}
+header nav#uxmain h1 img {margin-top:12px;}
+header nav#uxmain ul {float:left;}
+header nav#uxmain ul li  {float:left;height:68px;line-height:68px;}
+header nav#uxmain ul li::before {content:"|";margin-left:20px;margin-right:20px;color:#d2d2d2;}
+header nav#uxmain ul li:nth-of-type(1)::before {content:none;}
+header nav#uxmain ul li a {color:#282828;}
+header nav#uxmain p {float:right;background:#3c1651 url(../img/ico_reservation.png) no-repeat 170px center;line-height:68px;}
+
+/*background를 위에 축약형을 넣었다면 아래에 겹치지 않게 넣어야 초기화가 되지 않는다.*/
+
+header nav#uxmain p:hover {background-color:#4b285e;}
+header nav#uxmain p a {display:block;color:white;width:266px;height:68px;padding-left:80px;box-sizing:border-box;}
+
+
+/*slider*/
+
+/*position을 줘서 공중에 띄워져 있으므로 height:760px로 영역을 인식하게 한 후 top:107px을 주면 position값으로 아래 영역이 인식을 하지 못하므로 margin-top:107px을 줘서 아래 영역이 인식살 수 있도록 한다.*/
+#slider {position:relative;height:760px;margin-top:107px;}
+#slider h2 {color:white;font-size:80px;position:absolute;letter-spacing:70px;width:1200px;left:50%;margin-left:-600px;z-index:100;height:100px;font-weight:300;text-align:center;top:50%;margin-top:-100px;}
+#slider .slide {position:absolute;width:100%;height:760px;top:0;left:0;background:no-repeat center top;background-size:cover;display:none;}
+#slider #slider01 {background-image:url(../img/main_bg1.jpg);}
+#slider #slider02 {background-image:url(../img/main_bg2.jpg);}
+#slider #slider03 {background-image:url(../img/main_bg3.jpg);}
+#slider #slider04 {background-image:url(../img/main_bg4.jpg);}
+
+
+
+
+/*page01*/
+#page01 {height:970px;padding-top:90px;box-sizing:border-box;}
+#page01 section {width:1200px;height:790px;margin:0 auto;text-align:center;}
+/*부모가 970px 자식이 790px이면 970-790 = 180px이고 위 아래 90px 씩 여백을 줘야 하므로 padding-top:90px;를 준다.그리고 늘어나지 말라고 box-sizing:boder-box; 값을 줌*/
+#page01 section h3{text-align:center;position:relative;font-weight:500;}
+#page01 section hr {border:none;border:0.5px solid silver;}
+#page01 section h3 span {position:absolute;background:white;width:130px;padding:0 10px;top:-12px;left:50%;margin-left:-75px;color:#323232;}
+/*
+position:absolute를
+1. 겹칠때
+2. 좌우중앙 맞출때 width:150px이면 top:-12px;left:50%;margin-left:-75px;를 준다.
+3. 원하는 위치에 놓고 싶을때
+*/
+
+/*display:inline-block은 중앙정렬을 하기 위해 썼다. 그래서 부모인 page01 section에다가 text-align:center;를 줌*/
+#page01 section ul{display:inline-block;margin-top:40px;margin-bottom: 40px;}
+#page01 section ul li {float:left;}
+#page01 section ul li::before {content:"|";margin:0 25px;color:#a8a8a8;}
+#page01 section ul li:first-child:before{content:none;}
+#page01 section ul li a {color:#929292;}
+#page01 section #tab_all {height:600px;}
+#page01 section #viewimg {float:left;width:600px;height:600px;background:url(../img/banner04.jpg);background-size:cover;}
+#page01 section article {float:left;width:300px;height:300px;border:1px solid silver;border-left:none;box-sizing:border-box;position:relative;}
+#page01 section article:nth-of-type(3), #page01 section article:nth-of-type(4) {border-top:none;}
+#page01 section article h4 {margin-top:25px;margin-bottom:19px;color:silver;font-size:13px;font-weight:500;text-align:center;}
+#page01 section article:hover h4 {color:white;}
+#page01 section article h4 hr {width:21px;margin-bottom:23px;}
+#page01 section article dl {width:250px;margin:0 auto;}
+#page01 section article dl dt {font-size:15px;font-weight:600;margin-bottom:20px;}
+#page01 section article dl dd {font-size:15px;font-weight:300;}
+#page01 section article dl dd:nth-of-type(1) {height:90px;}
+/*#page01 section article dl dd:fisrt-child {를 하면 dt가 첫번째 태그이인데 dd에 first-child를 줬으므로 안먹힌거임.} 그래서 nth-of-type을 씀.*/
+#page01 section article dl dd a {position:relative;display:inline-block;width:100px;height:32px;background:white;border-radius:32px;line-height:32px;color:silver;margin-top:20px;z-index:2;}
+#page01 section article:nth-of-type(1):hover {background:#496915;color:white;}
+#page01 section article:nth-of-type(2):hover {background:#892559;color:white;}
+#page01 section article:nth-of-type(3):hover {background:#f58125;color:white;}
+#page01 section article:nth-of-type(4):hover {background:#d21055;color:white;}
+
+#page01 section article span {position:absolute;width:268px;height:260px;border:2px solid white;left:15px;top:19px;background:none;box-sizing:border-box;}
+
+
+#page01 {height:970px;padding-top:90px;box-sizing:border-box;}
+#page01 section {width:1200px;height:790px;margin:0 auto;text-align:center;}
+/*부모가 970px 자식이 790px이면 970-790 = 180px이고 위 아래 90px 씩 여백을 줘야 하므로 padding-top:90px;를 준다.그리고 늘어나지 말라고 box-sizing:boder-box; 값을 줌*/
+#page01 section h3{text-align:center;position:relative;font-weight:500;}
+#page01 section hr {border:none;border:0.5px solid silver;}
+#page01 section h3 span {position:absolute;background:white;width:130px;padding:0 10px;top:-12px;left:50%;margin-left:-75px;color:#323232;}
+/*
+position:absolute를
+1. 겹칠때
+2. 좌우중앙 맞출때 width:150px이면 top:-12px;left:50%;margin-left:-75px;를 준다.
+3. 원하는 위치에 놓고 싶을때
+*/
+
+/*display:inline-block은 중앙정렬을 하기 위해 썼다. 그래서 부모인 page01 section에다가 text-align:center;를 줌*/
+
+
+
+/*page02*/
+#page02 {height:970px;padding-top:90px;box-sizing:border-box;background:#efefef;}
+#page02 section {width:1200px;height:790px;margin:0 auto;text-align:center;}
+#page02 section h3{text-align:center;position:relative;font-weight:500;}
+#page02 section hr {border:none;border:0.5px solid silver;}
+#page02 section h3 span {position:absolute;background:#efefef;width:130px;padding:0 10px;top:-12px;left:50%;margin-left:-75px;color:#323232;}
+
+#page02 section ul{display:inline-block;margin-top:40px;margin-bottom: 40px;}
+#page02 section ul li {float:left;}
+#page02 section ul li::before {content:"|";margin:0 25px;color:#a8a8a8;}
+#page02 section ul li:first-child:before{content:none;}
+#page02 section ul li a {color:#929292;}
+#page02 #tab_delux {width:1200px;height:600px;}
+#page02 #tab_delux #room01 {float:left;width:600px;height:600px;background:url(../img/room1_1.jpg);background-size:cover;}
+#page02 #tab_delux #room02
+{float:left:width:600px;height:300px;background:url(../img/room1_2.jpg);}
+#page02 #tab_delux #room03
+{float:left:width:300px;height:300px;background:url(../img/room1_3.jpg);}
+
+#page02 #tab_delux article {width:300px;height:300px;background:#222222;float:left;}
+
+#page02 section article h5 {margin-top:25px;margin-bottom:20px;color:white;font-size:18px;font-weight:500;text-align:center;}
+#page02 section article h5 hr {width:12px;margin:16px auto 18px}
+
+#page02 section article ol li:nth-of-type(1) {font-size:14px;font-weight:300;height:70px;color:#999999;line-height:23px;}
+
+#page02 section article ol li a{position:relative;display:inline-block;width:100px;height:32px;border:1px solid #999999;border-radius:32px;line-height:32px;color:white;margin-top:45px;z-index:2;font-size:13px;}
+
+
+
+
+
+
+/*page03*/
+#page03 {height:970px;padding-top:90px;box-sizing:border-box;background:#ffffff;}
+#page03 section {width:1200px;height:790px;margin:0 auto;text-align:center;}
+#page03 section h3{text-align:center;position:relative;font-weight:500;}
+#page03 section hr {border:none;border:0.5px solid silver;}
+#page03 section h3 span {position:absolute;background:#ffffff;width:130px;padding:0 10px;top:-12px;left:50%;margin-left:-75px;color:#323232;}
+
+#page03 section ul{display:inline-block;margin-top:40px;margin-bottom: 40px;}
+#page03 section ul li {float:left;}
+#page03 section ul li::before {content:"|";margin:0 25px;color:#a8a8a8;}
+#page03 section ul li:first-child:before{content:none;}
+#page03 section ul li a {color:#929292;}
+
+#page03 #tab_delux {width:1200px;height:600px;}
+
+#page03 #tab_delux #room01 {float:right;width:600px;height:600px;background:url(../img/dining1_3.jpg);background-size:cover;}
+#page03 #tab_delux #room02
+{float:right;width:600px;height:300px;background:url(../img/dining1_1.jpg);}
+#page03 #tab_delux #room03
+{float:right;width:300px;height:300px;background:url(../img/dining1_2.jpg);}
+
+#page03 #tab_delux article {width:300px;height:300px;background:#222222;float:right;}
+
+#page03 section article h5 {margin-top:25px;margin-bottom:20px;color:white;font-size:18px;font-weight:500;text-align:center;}
+#page03 section article h5 hr {width:12px;margin:16px auto 18px}
+
+#page03 section article ol li:nth-of-type(1) {font-size:14px;font-weight:300;height:70px;color:#999999;line-height:23px;}
+
+#page03 section article ol li a{position:relative;display:inline-block;width:100px;height:32px;border:1px solid #999999;border-radius:32px;line-height:32px;color:white;margin-top:45px;z-index:2;font-size:13px;}
+
+/*page04*/
+
+#page04 {height:452px;background:#efefef;padding-top:84px;box-sizing:border-box;}
+#page04 #banner {width:1200px;margin:0 auto;}
+#page04 #banner .banbox {position:relative;width:594px;height:290px;float:left;background-size:cover;background-repeat:no-repeat;background-position:center;overflow:hidden;} 
+#page04 #banner #banner01 {}
+#page04 #banner #banner02 {float:right;}
+#page04 #banner .banbox dl {position:absolute;width:574px;height:272px;border:1px solid rgba(255,255,255,0.3);top:8px;left:9px;text-align:center;color:white;}
+
+/*mouse가 아웃이 되었을때*/
+#page #banner .banbox img {transition: all 1s;} 
+/*mouse가 호버가 되었을때*/
+#page04 #banner .banbox:hover img {transform:scale(1.1);transition:all 1s;}
+
+
+#page04 #banner #banner01 dt {font-size: 20px;height: 62px;margin-top: 59px;
+}
+#page04 #banner #banner01 dt hr {width:20px; height:1px; margin:15px auto; background-color:rgba(255,255,255,0.5);}
+#page04 #banner #banner01 dd {font-size:14px;line-height:24px;}
+#page04 #banner #banner01 dd a {
+    font-size:16px;display: block;width: 160px;height: 40px;line-height: 40px;color:white;
+    border: 1px solid rgba(247,248,248,0.7);margin: 30px auto 0;border-radius: 30px;transition: all 0.3s;
+}
+
+#page04 #banner #banner02 dt {font-size: 20px;height: 62px;margin-top: 59px;
+}
+#page04 #banner #banner02 dt hr {width:20px; height:1px; margin:15px auto; background-color:rgba(255,255,255,0.5);}
+#page04 #banner #banner02 dd {font-size:14px;line-height:24px;}
+#page04 #banner #banner02 dd a {
+    font-size:16px;display: block;width: 160px;height: 40px;line-height: 40px;color:white;
+    border: 1px solid rgba(247,248,248,0.7);margin: 30px auto 0;border-radius: 30px;transition: all 0.3s;
+}
+
+
+footer #img_logo {width:100%;height:310px;background:#282828;border-bottom:0.5px solid #333333;}
+footer #img_logo ul {width:489px;margin:0 auto;padding:115px 0 97px;box-sizing:border-box;}
+footer #img_logo ul li{float:left;margin-left:50px;}
+footer #img_logo ul li:nth-of-type(1){margin:0;}
+
+
+footer #footer_menu {width:100%;height:77px;background:#282828;}
+footer #footer_menu #footer_align {width:1200px;height:77px;margin:0 auto;}
+footer #footer_menu #footer_align ul {float:left;margin-top:24px;}
+footer #footer_menu #footer_align ol {float:right;margin-top:20px;}
+
+footer #footer_menu #footer_align ul .boldmenu li a {font-weight:900;}
+
+footer #footer_menu #footer_align ul li{float:left;}
+footer #footer_menu #footer_align ul li::before {display:inline-block;content:"|";margin:0 14px;color:#3e3e3e;height:10px;}
+footer #footer_menu #footer_align ul li:nth-of-type(1):before{content:"";margin:0;}
+footer #footer_menu #footer_align ul li a {font-size:12px;color:#d7d7d7;}
+footer #footer_menu #footer_align ol li{float:left;margin-right:12px;vertical-align:middle;}
+
+footer #footer_adress {width:100%;height:53px;background:#000000;}
+footer #adress_align {width:1200px;margin:0 auto;}
+footer #adress_align adress {float:left;}
+footer #adress_align adress span {font-size:12px;color:#999999;margin-right:16px;line-height:53px;display:inline-block;}
+footer #adress_align adress span:last-child {margin:0;}
+
+footer #footer_adress #familybtn {
+    float:right;width:136px;height:29px;margin-top:11px;
+}
+footer #footer_adress #familybtn p { border: 1px solid #575757;border-radius: 15px;box-sizing:border-box;}
+footer #footer_adress #familybtn p a{
+   font-size:11px;line-height:30px;color:#c3c3c3;display:inline-block;width:136px;padding-left:20px;box-sizing:border-box;
+}
+
+footer #footer_adress #familybtn p {background:url(../img/triangle.png) no-repeat 100px center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

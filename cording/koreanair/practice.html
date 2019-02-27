@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>제이쿼리 모바일 - 대한항공  </title>
+   <meta charset="UTF-8">
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+      <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+      <meta name="viewport" content="width=divice-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/androidicons.css" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto' rel='stylesheet' type='text/css'>
+      <style>
+		/*구글에서 제공하는 나눔고딕 웹폰트주소*/
+		@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+		
+		*{margin:0px; padding:0px;}
+		ul, ol{list-style-type:none;}
+		img{border:none;}
+		a{text-decoration:none;}
+		body{width:100%; height:100%;
+			position:relative;
+			font-family:'Nanum Gothic', Verdana, Arial;
+			font-size:0.75em; /* 0.75em은 pixel단위로 12px, %단위는 100%입니다.*/
+			color:#999;
+		}
+	  
+	  
+	  
+		/* 체크박스 숨기기 display:none;을 적어준다. */
+		#btn{display:none;}
+		/*헤더영역 안의 메뉴 위치 잡기*/
+		ui-header{position:relative;}
+		ui-header label{position:absolute;top:5px;left:5px;}
+		
+		/*헤더영역 안의 메뉴 위치 잡기*/
+		.ui-header{position:relative;}
+		.ui-header label{position:absolute;top:10px;left:10px;cursor:pointer;}
+		.ui-header #log_mnu{position:absolute;top:10px;right:10px;cursor:pointer;}
+		.ui-header .ai-list{font-size:26px;font-weight:bold;}
+		.ui-header .ai-user{font-size:26px;font-weight:bold;}
+		
+		/*korean air 로고 최대-최소로 만들기*/
+		.ui-header h1 img{max-width:310px;width:100%;}
+		
+		/*토글목록만들기*/
+		#btn{display:none;}
+		#btn+#wrap>#toggle_gnb_wrap{display:none;}
+		#btn:checked+#wrap>#toggle_gnb_wrap{display:block;}
+	  </style>
+
+</head>
+<body>
+	<div data-role="page" id="index" data-theme="f">
+		<input type="checkbox" data-role="none" id="btn" />
+		<div id="wrap">
+			<div data-role="header" data-theme="f" id="main_header">
+				<label for="btn">
+					<span class="ai-list"</span>
+				</label>
+				<h1><img src="./img/txt_logo.png" alt="로고" /></h1>
+				<p id="log_mnu"><span class="ai-user"></span></p>
+				
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#">개인</a></li>
+						<li><a href="#">국내선 예약</a></li>
+						<li><a href="#">국제선 예약</a></li>
+					</ul>
+				</div><!-- navbar 종료 -->
+			</div><!-- header 종료 -->
+			<div id="toggle_gnb_wrap">
+				<div id="toggle_gnb">
+					<ul>
+						<li><a href="#">버튼</a></li>
+						<li><a href="#">버튼</a></li>
+						<li><a href="#">버튼</a></li>
+						<li><a href="#">버튼</a></li>
+						<li><a href="#">버튼</a></li>
+						<li><a href="#">버튼</a></li>
+						<li><a href="#">버튼</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div data-role="content" data-theme="f">
+			콘텐츠영역
+		</div>
+		<div data-role="footer" data-theme="f">
+			푸터영역
+		</div>
+	</div>
+</body>
+</html>

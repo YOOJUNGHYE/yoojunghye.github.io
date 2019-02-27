@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+#wrapper {width:100%;height:100%;}
+header {position:relative;background:url(../img/dtp_bgfont.png) no-repeat #d3329c center;height:500px;}
+header h1 {float:left;width:45px;padding-top:25px;box-sizing:border-box;margin-left:2vw;}
+header h1 img{width:45px;}
+
+header > ul {float:right;padding-top:40px;box-sizing:border-box;margin-right:8%;}
+header > ul > li {float:left;margin-left:2vw;width:18vw;text-align:center;}
+header > ul > li:nth-of-type(1) {margin:0;}
+header > ul > li > a {color:#ffffff;font-weight:400;font-size:3.5vw;}
+
+
+header hgroup {width:80%;margin:170px auto;}
+header hgroup {position:static;}
+header hgroup h3 {font-size:51px;}
+header hgroup h2 {font-size:70px;margin-top:20px;}
+header hgroup h4 {font-size:18px;margin-top:20px;}
+
+header #quickmenu {display:none;}
+header button {bottom:50px;}
+
+#design {width:90%;margin:-100px auto 100px;}
+#design_bottom img#d_b_480 {width:100%;display:inline-block;}
+#design_bottom img#d_b {display:none;}
+
+footer ul li:nth-of-type(1) { display:none; }		
+footer ul li:nth-of-type(2) { display:none; }	
+footer ul li:nth-of-type(3) { display:none; }

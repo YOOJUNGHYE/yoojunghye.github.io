@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">		
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/sub01.css">
+	<link rel="stylesheet" href="css/font.css">
+	<style>
+		#wrapper { height:100%; }
+		.wrap { position:relative; height:100%; }
+
+
+		@media all and ( max-width:1200px ) {
+
+		}
+
+		@media all and ( max-width:480px ) {
+			
+		}		
+	</style>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script>
+        $(function(){
+            $("#wrapper header nav ul li:eq(0)").mouseenter(function(){
+                $('a',this).text("포트폴리오");
+                return false;
+            });
+            $("#wrapper header nav ul li:eq(1)").mouseenter(function(){
+                $('a',this).text("자기소개");
+                return false;
+            });
+            $("#wrapper header nav ul li:eq(2)").mouseenter(function(){
+                $('a',this).text("에필로그");
+                return false;
+            });
+            
+            
+            $("#wrapper header nav ul li:eq(0)").mouseleave(function(){
+                $('a',this).text("설레는");
+            });
+            $("#wrapper header nav ul li:eq(1)").mouseleave(function(){
+                $('a',this).text("두근거리는");
+            });
+            
+            $("#wrapper header nav ul li:eq(2)").mouseleave(function(){
+                $('a',this).text("달달한");
+            });
+            
+            
+            
+            
+//         
+//        var winHeight = $(window).height(); /*윈도우의 높이값을 컴퓨터가 다 다르기때문에 이게 켜지는 윈도우마다 하이트값을 구해와라*/
+//        
+//        $(".wrap").mousewheel(function(e, delta){
+//            currentTop = $(this).offset().top;/*해당 페이지의 위치값!(마진탑의 위치값..?)*/
+//            if (delta > 0){ /*delta=마우스 휠을 위로 돌리면 마이너스가 실행되고..*/
+//                $("html,body").stop().animate({scrollTop: currentTop - winHeight},1000,"easeInOutQuart");
+//                return false;
+//            }else{/*delta=마우스 휠을 반대로(아래로)돌리면 플러스로 실행돼라..*/
+//                $("html,body").stop().animate({scrollTop: currentTop + winHeight},1000,"easeInOutQuart");
+//                return false;
+//            }/*마우스 스크롤할때 딱딱 걸리는 효과*/
+//            
+//            $(window).resize(function(){
+//                winHeight=$(window).height();
+//            });/*윈도우 사이즈에 맞춰서 높이값도 바꿔 맞춰라(윈도우값이 작아지면 작아지고..)*/
+//        });
+//   
+            var winHeight = $(window).height();
+    
+              $("#topbutton").click(function(){
+                $("html,body").animate({scrollTop:0});
+            });
+          
+            
+            $(window).scroll(function(){
+				var scrPos = $(window).scrollTop();
+				if( scrPos > 3500) {
+					$("#design_wrap #intro img:eq(1)").addClass("view");
+				}
+                if(scrPos > winHeight) {
+                    //정해진 컴퓨터 화면보다 스크롤 값이 커지면 보여라.
+                    $("#topbutton").stop().addClass("view");
+                    return false;
+                }else {
+                    $("#topbutton").stop().removeClass("view");
+                    return false;
+                }
+			})
+        });
+    </script>
+</head>
+<body>
+	<div id="wrapper">
+        <header>
+           <nav>
+                <h1><a href="#"><img src="img/logo.png"></a></h1>   
+                <ul>
+                    <li><a href="#">설레는</a></li>
+                    <li><a href="#">두근거리는</a></li>
+                    <li><a href="#">달달한</a></li>
+                </ul>
+           </nav>
+            <hgroup>
+                <h3>Team <span>project</span></h3>
+                <h2>PICK MON</h2>
+                <h4>Mobile UX Design &amp; Web Design</h4>
+            </hgroup>
+            <button>
+         
+                <p><a href="#">prev</a></p>
+                <p><a href="#">next</a></p>
+            </button>
+            <div id="quickmenu">
+                <ul>
+                    <li><a href="#">U</a></li>
+                    <li><a href="#">W<sup>1</sup></a></li>
+                    <li><a href="#">W<sup>2</sup></a></li>
+                    <li><a href="#">P<span></span></a></li>
+                    <li><a href="#">L</a></li>
+                    <li><a href="#">I</a></li>
+                    <li><a href="#">A</a></li>
+                    <li><a href="#">O</a></li>
+                    <li><a href="#">D</a></li>
+                </ul>
+            </div>
+            <div id="phone">
+                <img src="img/phone.png">
+            </div>
+        </header>
+        <div id="yellowbox"></div>
+        <div id="planpurpose">
+           <hgroup>
+                <h2>PLAN <span>PURPOSE</span></h2>
+                <p>
+                    저의 조는 봄 관련 어플 사업 계획을 목표로 사업을 구상 하던 중 피크닉을 주제로 한 도시락 어플을<br>
+                    생각하게 되었습니다. 그것을 출발 점으로 자연주의, 편리함, 신뢰감, 즐거운이라는 4가지 키워드를<br>
+                    잡았습니다. 어플을 디자인 할 때에 소비자의 편의성과 다양한 연령층의 소비를 촉진하는 것을 중점으로<br>
+                    디자인하였습니다.
+                </p>
+            </hgroup>
+        </div>
+        <div id="goalsetting">
+           <div id="goal_wrap">
+               <h2>GOAL <span>SETTING</span></h2>
+                <dl>
+                    <dt>GOAL 01</dt>
+                    <dd>자연주의<br>소비자들의 건강을 생각한다는<br>것을 어필합니다.</dd>
+                </dl>
+                <dl>
+                    <dt>GOAL 02</dt>
+                    <dd>편리함<br>어플 디자인에서 소비자의<br>접근성이 높은 UI/UX를<br>구현합니다.</dd>
+                </dl>
+                <dl>
+                    <dt>GOAL 03</dt>
+                    <dd>신뢰감<br>어플의 색감이나 사진등을<br>첨부해 신뢰감을 어필합니다.</dd>
+                </dl>
+                <dl>
+                    <dt>GOAL 04</dt>
+                    <dd>즐거운<br>즐거움을 담은 색감이나 사진,<br>키워드, 픽토그램등을 사용해서<br>표현합니다.</dd>
+                </dl>
+           </div>
+        </div>
+        <div id="strategy">
+            <div id="strategy_wrap">
+                <h2><span>STRATEGY</span></h2>
+                <div id="img_area">
+                    <img src="img/strategy.png">
+                </div>
+            </div>
+        </div>
+        <div id="identity">
+           <div id="identity_wrap">
+                <h2><span>IDENTITY</span></h2>
+                <div id="color">
+                   <p>color</p>
+                   <hr>
+                    <ul>
+                        <li><a href="#">#f55947</a></li>
+                        <li><a href="#">#e8ae46</a></li>
+                        <li><a href="#">#f68448</a></li>
+                        <li><a href="#">#fdb1b2</a></li>
+                    </ul>
+                </div>
+                <div id="font_ex">
+                    <p>Font</p>
+                    <hr>
+                    <img src="img/font_arista.png">
+                </div>
+                <div id="logo">
+                    <p>Logo</p>
+                    <hr>
+                    <img src="img/logo_ex.png">
+                    <p>Picnic 도시락이 아이템인 저희 조는 소비자들이 마음대로 물건을 고르고(pick) 바구니에 담는다는 생각을 형상화해서 로고를 만들었습니다. 소비자들이 물건을 고르다의 PICK + monster(MON)을 결합해 생명력을 부여하였고, 색감은 바구니의 색상에서 착안한 #e8ae46의 컬러를 썼습니다. pickmon의 폰트 컬러는 식욕을 돋우는 #f55947의 컬러를 썼고, 폰트는 소비자의 UX를 반영하여 보다 동글동글하고 접근하기 쉬운 폰트 ARISTA를 썼습니다.</p>
+                </div>
+            </div>
+        </div>
+        <div id="design">
+           <div id="design_wrap">
+                <h2><span>DESIGN</span></h2>
+                <div id="intro">
+                    <img src="img/intro_white.png">
+                    <img src="img/intro_logomoving.png">
+                </div>
+            </div>
+            <div id="design_bottom">
+              <img src="img/design_bottom.png">
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <li><a href="tel:010-7767-0891">TEL : 010-7767-0891</a></li>
+                <li><a href="mailto:sjqnfl90@naver.com">E-MAIL : sjqnfl90@naver.com</a></li>
+                <li><a href="http://lovelydesigner.co.kr">HOMPAGE : lovelydesigner.co.kr</a></li>
+                <li><a href="#">이 사이트는 chorme에 최적화 되어 있습니다.</a></li>
+            </ul>
+        </footer>
+	</div>
+	<div id="topbutton">
+	    <a href="#"><img src="img/top_button.png"></a>
+	</div>
+</body>
+</html>
+<!--
+중요한 제목 같은 것이 있으면 dl dt dd
+작고 비슷한 사각형 : ul li
+-->

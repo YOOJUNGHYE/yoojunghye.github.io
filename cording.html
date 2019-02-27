@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">		
+	<title>Cording</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/cording.css">
+	<link rel="stylesheet" href="css/font.css">
+	
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width:1200px)"  href="css/screen_cording_1200.css">
+	<link rel="stylesheet" type="text/css" media="only screen and (max-width:480px)"  href="css/screen_cording_480.css">
+	
+	<style>
+		#wrapper { height:100%; }
+		.wrap { position:relative; height:100%; }
+
+
+		@media all and ( max-width:1200px ) {
+
+		}
+
+		@media all and ( max-width:480px ) {
+			
+		}		
+	</style>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script>
+        $(function(){
+            $("#wrapper header > ul > li:eq(0)").mouseenter(function(){
+                $('a',this).text("포트폴리오");
+                return false;
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseenter(function(){
+                $('a',this).text("자기소개");
+                return false;
+            });
+            $("#wrapper header > ul > li:eq(2)").mouseenter(function(){
+                $('a',this).text("에필로그");
+                return false;
+            });
+            
+            
+            $("#wrapper header > ul > li:eq(0)").mouseleave(function(){
+                $('a',this).text("설레는");
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseleave(function(){
+                $('a',this).text("두근거리는");
+            });
+            
+            $("#wrapper header > ul > li:eq(2)").mouseleave(function(){
+                $('a',this).text("달달한");
+            });
+            
+            
+            
+            var winHeight = $(window).height();
+    
+              $("#topbutton").click(function(){
+                $("html,body").animate({scrollTop:0});
+            });
+          
+            
+            $(window).scroll(function(){
+				var scrPos = $(window).scrollTop();
+				if( scrPos > 3500) {
+					$("#design_wrap #intro img:eq(1)").addClass("view");
+				}
+                if(scrPos > winHeight) {
+                    //정해진 컴퓨터 화면보다 스크롤 값이 커지면 보여라.
+                    $("#topbutton").stop().addClass("view");
+                    return false;
+                }else {
+                    $("#topbutton").stop().removeClass("view");
+                    return false;
+                }
+			})
+        });
+    </script>
+</head>
+<body>
+	<div id="wrapper">
+        <header>
+   
+                <h1><a href="index.html"><img src="img/logo.png"></a></h1>   
+                <ul>
+                    <li><a href="gallery.html">설레는</a></li>
+                    <li><a href="introduce.html">두근거리는</a></li>
+                    <li><a href="epilogue.html">달달한</a></li>
+                </ul>
+
+            <hgroup>
+                <h3>Website <span>Cording</span></h3>
+                <h2>VARIOUS</h2>
+                <h4>Various site</h4>
+            </hgroup>
+            <button>
+                <p><a href="logo.html">prev</a></p>
+                <p><a href="artwork.html">next</a></p>
+            </button>
+            <div id="quickmenu">
+                <ul>
+                    <li><a href="mobileux.html">U</a></li>
+                    <li><a href="bobi.html">W<sup>1</sup></a></li>
+                    <li><a href="smeg.html">W<sup>2</sup></a></li>
+                    <li><a href="project.html">P</a></li>
+                    <li><a href="logo.html">L</a></li>
+                    <li><a href="cording.html">C<span></span></a></li>
+                    <li><a href="artwork.html">A</a></li>
+                    <li><a href="others.html">O</a></li>
+                    <li><a href="dtp.html">D</a></li>
+                </ul>
+            </div>
+            <div id="notebook">
+                <img src="img/cording_notebook.png">
+            </div>
+        </header>
+        <div id="colorbox"></div>
+        
+        
+        
+        <div id="planpurpose">
+           <hgroup>
+                <h2>PLAN <span>PURPOSE</span></h2>
+                <p>
+매일 8시간 5개월간 동안 만들었던 저의 코딩 작업물입니다. 주로 기존 사이트를 벤치마킹하여 그대로<br>따라하는 방식으로 코딩을 습득했습니다. 기존 사이트와 최대한 비슷하게 만들기 위해 연구를 하고<br>기능들을 살펴보면서 만들었던 홈페이지입니다.
+                </p>
+            </hgroup>
+        </div>
+
+        <div id="cording">
+            <div id="cording_align">
+                <div id="cordbox01" class="right">
+                    <a href="cording/theplaza/index.html" target="_blank"><img src="img/cording02.png"></a>
+                    <p>
+                        <span>Web Site 01 _ 더 프라자 호텔</span><br>
+                        더 프라자 호텔을 홈페이지를 참고하여, 기존에 있던 홈페이지 구조에<br>맞춰 똑같이 구현하도록 노력한 홈페이지 입니다. 배경이 자연스럽게<br>여러 이미지로 바뀌도록 했으며, 제이쿼리를 이용해서 마우스가<br>hover 됐었을때의 동작도 구현했습니다.
+                    </p>
+                </div>
+                <div id="cordbox02" class="left">
+                    
+                    <p>
+                         <span>Web Site 02 _ 이랜드 서비스</span><br>
+                        이랜드 서비스 홈페이지를 참고하여, 기존에 있던 홈페이지 구조에<br>맞춰 똑같이 구현하도록 노력한 홈페이지 입니다. 메인 제목이<br>자연스럽게 움직이도록 구현했으며, 홈페이지를 아래로 scroll<br>할때마다 한 페이지씩 보이도록 만들었습니다. 아래로 내릴 수록<br>각기 다른 움직임이 있으며 마지막 footer 부분은 슬라이더가<br>넘어가도록 만들었습니다.
+                    </p>
+                    <a href="cording/elandservice/index.html" target="_blank"><img src="img/cording01.png"></a>
+                </div>
+                <div id="cordbox03" class="right">
+                    <a href="http://xn--3e0bp5x4kcg0dve89f5uhs8f61yd0icza.com/"><img src="img/cording03.png"></a>
+                    <p>
+                        <span>Web Site 03 _ 한국애플서비스센터</span><br>
+                        회사에서 애플 제품 전용 전문서비스센터 홈페이지를 만들었습니다.<br>홈페이지를 기획할때 ‘애플 홈페이지가 가장 신뢰를 주겠다.’ 생각이<br>들어서 가장 애플 홈페이지 비슷하게 만들었습니다. 메뉴 버튼도<br>벤치마킹하여 호버가 되면 커지게 했고, 전반적으로 블랙의 느낌으로<br>만들었습니다.
+                    </p>
+                </div>
+                <div id="cordbox04" class="left twolines">
+                   
+                    <p>
+                    <span>Web Site 04 _ 애플서비스</span><br>
+                    위의 홈페이지와 동일한 기획하에 만들어진 홈페이지며,<br>화이트 톤의 느낌으로 만든 홈페이지 입니다.
+                    </p>
+                     <a href="http://sungui.cafe24.com/" target="_blank"><img src="img/cording04.png"></a>
+                </div>
+                
+                <div id="cordbox05" class="right twolines">
+                    <a href="cording/airbusan/index.html"><img src="img/cording05.png"></a>
+                    <p>
+                    <span>Web Site 05 _ 에어부산</span><br>
+                    에어 부산의 모바일 버전을 벤치마킹하여 제이쿼리 모바일로<br>코딩하여 만든 홈페이지 입니다.
+                    </p>
+                </div>
+                
+                <div id="cordbox06" class="left twolines">
+                  
+                    <p>
+                    <span>Web Site 06 _ 대한항공</span><br>
+                    대한 항공의 모바일 버전을 벤치마킹하여 제이쿼리 모바일로<br>코딩하여 만든 홈페이지 입니다.
+                    </p>
+                    <a href="cording/koreanair/index.html" target="_blank"><img src="img/cording06.png"></a>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div id="cording02">
+            <div id="cording_align02">
+                <div id="cordbox01_02" class="right">
+                    <a href="cording/theplaza/index.html" target="_blank"><img src="img/cording02.png"></a>
+                    <p>
+                        <span>Web Site 01 _ 더 프라자 호텔</span><br>
+                        더 프라자 호텔을 홈페이지를 참고하여, 기존에 있던 홈페이지 구조에<br>맞춰 똑같이 구현하도록 노력한 홈페이지 입니다. 배경이 자연스럽게<br>여러 이미지로 바뀌도록 했으며, 제이쿼리를 이용해서 마우스가<br>hover 됐었을때의 동작도 구현했습니다.
+                    </p>
+                </div>
+                <div id="cordbox02_02" class="left">
+                        <a href="cording/elandservice/index.html" target="_blank"><img src="img/cording01.png"></a>
+                    <p>
+                         <span>Web Site 02 _ 이랜드 서비스</span><br>
+                        이랜드 서비스 홈페이지를 참고하여, 기존에 있던 홈페이지 구조에<br>맞춰 똑같이 구현하도록 노력한 홈페이지 입니다. 메인 제목이<br>자연스럽게 움직이도록 구현했으며, 홈페이지를 아래로 scroll<br>할때마다 한 페이지씩 보이도록 만들었습니다. 아래로 내릴 수록<br>각기 다른 움직임이 있으며 마지막 footer 부분은 슬라이더가<br>넘어가도록 만들었습니다.
+                    </p>
+           
+                </div>
+                <div id="cordbox03_02" class="right">
+                    <a href="http://xn--3e0bp5x4kcg0dve89f5uhs8f61yd0icza.com/" target="_blank"><img src="img/cording03.png"></a>
+                    <p>
+                        <span>Web Site 03 _ 한국애플서비스센터</span><br>
+                        회사에서 애플 제품 전용 전문서비스센터 홈페이지를 만들었습니다.<br>홈페이지를 기획할때 ‘애플 홈페이지가 가장 신뢰를 주겠다.’ 생각이<br>들어서 가장 애플 홈페이지 비슷하게 만들었습니다. 메뉴 버튼도<br>벤치마킹하여 호버가 되면 커지게 했고, 전반적으로 블랙의 느낌으로<br>만들었습니다.
+                    </p>
+                </div>
+                <div id="cordbox04_02" class="left twolines">
+                    <a href="http://sungui.cafe24.com/" target="_blank"><img src="img/cording04.png"></a>
+                    <p>
+                    <span>Web Site 04 _ 애플서비스</span><br>
+                    위의 홈페이지와 동일한 기획하에 만들어진 홈페이지며,<br>화이트 톤의 느낌으로 만든 홈페이지 입니다.
+                    </p>
+
+                </div>
+                
+                <div id="cordbox05_02" class="right twolines">
+                    <a href="cording/airbusan/index.html" target="_blank"><img src="img/cording05.png"></a>
+                    <p>
+                    <span>Web Site 05 _ 에어부산</span><br>
+                    에어 부산의 모바일 버전을 벤치마킹하여 제이쿼리 모바일로<br>코딩하여 만든 홈페이지 입니다.
+                    </p>
+                </div>
+                
+                <div id="cordbox06_02" class="left twolines">
+                  <a href="cording/koreanair/index.html" target="_blank"><img src="img/cording06.png"></a>
+                    <p>
+                    <span>Web Site 06 _ 대한항공</span><br>
+                    대한 항공의 모바일 버전을 벤치마킹하여 제이쿼리 모바일로<br>코딩하여 만든 홈페이지 입니다.
+                    </p>
+
+                </div>
+                
+            </div>
+        </div>
+        
+        <footer>
+            <ul>
+                <li><a href="tel:010-7767-0891">TEL : 010-7767-0891</a></li>
+                <li><a href="mailto:sjqnfl90@naver.com">E-MAIL : sjqnfl90@naver.com</a></li>
+                <li><a href="http://lovelydesigner.co.kr">HOMPAGE : lovelydesigner.co.kr</a></li>
+                <li><a href="#">이 사이트는 chorme에 최적화 되어 있습니다.</a></li>
+            </ul>
+        </footer>
+	</div>
+	<div id="topbutton">
+	    <a href="#"><img src="img/top_button.png"></a>
+	</div>
+</body>
+</html>
+<!--
+중요한 제목 같은 것이 있으면 dl dt dd
+작고 비슷한 사각형 : ul li
+-->

@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/*header*/
+#wrapper {width:100%;height:100%;}
+header {position:relative;background:url(../img/smeg_bgfont.png) no-repeat #ebebeb center;height:716px;}
+header h1 {float:left;width:45px;padding-top:25px;box-sizing:border-box;margin-left:2vw;}
+header h1 img{width:45px;}
+
+header > ul {float:right;padding-top:40px;box-sizing:border-box;margin-right:8%;}
+header > ul > li {float:left;margin-left:2vw;width:6vw;text-align:center;}
+header > ul > li:nth-of-type(1) {margin:0;}
+header > ul > li > a {color:#000000;font-weight:400;font-size:1.0vw;}
+
+header hgroup {width:560px;height:230px;}
+header hgroup {position:absolute;top:289px;left:243px;}
+header hgroup h3 {margin-top:-28px;font-size:75px;color:#010101;font-family:'HelveticaNeueLTStd-Bd';letter-spacing:-5.1px;font-weight:400;}
+header hgroup h3 span {color:#353535;}
+header hgroup h2 {font-size:107px;color:#010101;font-family:'HelveticaNeueLTStd-Bd';letter-spacing:-5.1px;font-weight:500;margin-top:-18px;}
+header hgroup h4 {font-size:26px;color:#010101;font-family:'HelveticaNeueLTStd-Roman';font-weight:normal;}
+
+header button {position:absolute;bottom:150px;left:415px;}
+header button p {margin-right:12px;height:24px;float:left;padding-top:10px;}
+header button p:nth-of-type(2) {margin:0;}
+header button p a {display:block; color:#000000;font-size:16px;letter-spacing:2px;background:url(../img/line_black.png) no-repeat top center;padding-top:10px;}
+
+ 
+header #quickmenu {width:358px;position:absolute;left:50%;margin-left:-300px;bottom:30px;z-index:100;}
+header #quickmenu ul li{float:left;margin-left:30px;}
+header #quickmenu ul li:nth-of-type(1) {margin:0;}
+header #quickmenu ul li:nth-of-type(9) {margin-right:0;}
+header #quickmenu ul li a {font-size:16px;color:#949494;}
+
+header #quickmenu ul li:nth-of-type(3) a {color:#000000;}
+header #quickmenu ul li:nth-of-type(3) span {border-radius:6px;width:6px;height:6px;display:inline-block;background-color:#000000;position:absolute;bottom:35px;left:98px;}
+
+#colorbox {width:100%;height:44px;background:#3c3e4a;}
+
+header #notebook {position:absolute;top:230px;right:0;}
+
+
+
+/*planpurpose*/
+#planpurpose {width:1200px;margin:0 auto 100px;}
+#planpurpose h2 {margin-top:100px;font-size:35px;font-weight:normal;background:url(../img/smeg_bullet.png) no-repeat left;padding-left:30px;box-sizing:border-box;}
+#planpurpose h2 span {font-weight:bold;}
+#planpurpose p {margin-top:57px;font-size:17px;line-height:30px;}
+
+
+
+/*goalsetting*/
+#goalsetting {width:100%;height:600px;background:url(../img/smeg.jpg) no-repeat center;}
+#goal_wrap{width:1200px;height:600px;margin:0 auto;padding-top:76px;box-sizing:border-box;}
+#goal_wrap h2 {width:283px;margin:0 auto 76px;font-size:35px;font-weight:normal;background:url(../img/white_bullet.png) no-repeat left;padding-left:30px;box-sizing:border-box;color:white;}
+#goal_wrap h2 span {font-weight:bold;}
+
+#goal_wrap dl{width:304px;height:338px;border:1px solid white;margin-left:93px;float:left;display:inline-block;text-align:center;}
+#goal_wrap dl:nth-of-type(1) {margin-left:0;}
+#goal_wrap dl dt {font-size:24px;font-weight:400;color:white;margin:50px 0 35px 0;}
+#goal_wrap dl dd {font-size:18px;font-weight:400;line-height:32px;color:white;}
+#goal_wrap #goal_align {width:1104px;margin:0 auto;}
+
+
+/*strategy*/
+
+#strategy {width:100%;}
+#strategy_wrap {width:1200px;margin:0 auto;text-align:center;}
+#strategy_wrap h2 {display:inline-block;margin:100px 0 100px 0;font-size:35px;font-weight:normal;background:url(../img/smeg_bullet.png) no-repeat left;padding-left:30px;box-sizing:border-box;}
+#strategy_wrap h2 span {font-weight:bold;}
+#strategy_wrap #u_s_480 {display:none;}
+
+
+#identity {width:100%;}
+#identity_wrap {width:1200px;margin:0 auto;text-align:center;}
+#identity_wrap h2 {display:inline-block;margin:100px 0 100px 0;font-size:35px;font-weight:normal;background:url(../img/smeg_bullet.png) no-repeat left;padding-left:30px;box-sizing:border-box;}
+#identity_wrap h2 span {font-weight:bold;}
+#identity_wrap #color{height:342px;}
+#identity_wrap p {font-size:24px;text-align:left;}
+#identity_wrap hr {border:none;border:0.5px solid #dedede;}
+#identity_wrap #color ul {margin-top:34px;}
+#identity_wrap #color ul li {width:274px;height:261px;background-color:#f55947;float:left;margin-left:189px;box-shadow:6px 10px 13px 0 rgba(0,0,0,0.2);}
+#identity_wrap #color ul li:nth-of-type(1) {margin:0;background-color:#1a1a1a;}
+#identity_wrap #color ul li:nth-of-type(2) {background-color:#f7f7f5;}
+#identity_wrap #color ul li:nth-of-type(3) {background-color:#ffffff;}
+
+
+#identity_wrap #color ul li a {text-align:center;font-size:24px;line-height:261px;color:white;}
+#identity_wrap #color ul li:nth-of-type(2) a {color:#000000;}
+#identity_wrap #color ul li:nth-of-type(3) a {color:#000000;}
+
+
+#identity_wrap #font {overflow:hidden;}
+#identity_wrap #font_ex p {margin-top:36px;}
+#identity_wrap #font_ex img#f_ux {display:inline-block;margin-top:34px;}
+#identity_wrap #font_ex img#f_ux_480 {display:none;}
+
+#identity_wrap #font {overflow:hidden;}
+#identity_wrap #logo p {margin-top:36px;}
+#identity_wrap #logo img#l_ux {display:inline-block;margin-top:34px;}
+#identity_wrap #logo img#l_ux_480 {display:none;}
+
+
+
+#design {width:100%;}
+#design {text-align:center;}
+#design h2 {display:inline-block;margin:100px 0 100px 0;font-size:35px;font-weight:normal;background:url(../img/smeg_bullet.png) no-repeat left;padding-left:30px;box-sizing:border-box;}
+#design h2 span {font-weight:bold;}
+
+
+#design_bottom {width:100%;margin:0 auto;background:url(../img/smeg_design_bottom_bg.png) no-repeat center;text-align: center;}
+
+
+#design_bottom img#u_d_b {display:inline-block;}
+#design_bottom img#u_d_b_480 {display:none;}
+
+footer {width:100%;height:44px;background:#36312b;}
+footer ul {width:1200px;margin:0 auto;}
+footer ul li {position:relative;float:left;line-height:44px; margin-left:4vw;margin-right:17px;}
+footer ul li:before {position:absolute;top:22px; content:"|";color:#a8a7a4; margin-left:-10px; line-height:20px; }
+
+footer ul li a {color:#a8a7a4;font-size:14px;}
+
+
+#topbutton {position:fixed;bottom:50px;right:50px;opacity:0;transition:all 0.5s;}
+#topbutton.view {opacity:1;}
+#topbutton img {width:65px;height:65px;}
+
+
+
+
+
+
+
+
+
+
+
+

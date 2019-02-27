@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+
+#bg01 {background-color:#fee4cd;height:42.0814%; margin-top:2%;} 
+#bg02 {background-color:#fbad99;height:49.9509%;border-top:1px solid #36312b;}
+
+/*bg01*/
+#bg01_align {  height:100%;}
+
+.gallery {width:96%;height:100%; margin:0 auto;overflow:hidden;margin:0 auto;}
+
+.gallery .gallerys{width:24%;border-left:1px solid #36312b;float:left;text-align:center;box-sizing:border-box; position:relative; display:flex; align-items:center; justify-content:center; height:100%; } 
+
+#bg02_align .gallerys { height:75%; padding-top:2%;  }
+
+
+
+
+.gallery #gallery01 {border-left:0;}
+.gallery #gallery05 {border-left:0;}
+.gallery .gallerys hr {position:absolute;border:none;height:1px;width:23%;left:0; background:black; top:45%; }
+.gallery .gallerys dl {position:absolute;left:43px;bottom:15px;}
+ #bg01_align dl { bottom:30px; }
+.gallery .gallerys dt {font-family: 'Nanum Gothic', sans-serif; font-weight:bold;letter-spacing:-0.5px;text-align:left;font-size:0.85vw;}
+.gallery .gallerys dd {letter-spacing:-0.5px;text-align:left;font-size:0.8vw;}
+.gallery .gallerys dd a {color:#333333;}
+.gallery .gallerys p:nth-of-type(2) {position:absolute; }
+.gallery .gallerys p:nth-of-type(1)  { width:13vw;height:13vw; margin-top:-10%; z-index:100; border-radius:20vw; overflow:hidden; }
+.gallery .gallerys p:nth-of-type(1) img { width:100%; transition:all 1s;}
+
+.gallery .gallerys p:nth-of-type(1):hover img {transform:scale(1.3); transition:all 1s; }
+.gallery .gallerys p:nth-of-type(1):hover { border:1.2vw solid #fb8f74; box-sizing:content-box; }
+.gallery .gallerys p:nth-of-type(3) {position:absolute;right:4%;bottom:20px; width:2.6%; }
+.gallery .gallerys p:nth-of-type(3) img { width:100%; }
+/*bg02*/
+#bg02_align .gallerys dl { bottom:0px;}
+
+
+@media all and ( max-width:480px ) {
+	.gallery {height:80%;}
+	.gallery .gallerys p:nth-of-type(1)  { width:29vw; height:auto; margin-top:-10%; z-index:100; border-radius:13vw; overflow:hidden; }	
+	.gallery .gallerys dl {position:absolute;left:7px;bottom:15px;}
+		 #bg01_align dl { bottom:50px; }
+	#gallery02 dl { bottom:20px; }
+
+	#gallery02 dl dd span { display:block; }
+
+	}
+

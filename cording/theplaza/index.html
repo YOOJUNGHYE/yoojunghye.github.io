@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>The Plaza Hotel</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+        
+    </style>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/drawSVGPlugin.min.js"></script>
+    <script src="js/tweenMax.min.js"></script>
+    <script>
+        $(function(){
+            var t1 = new TimelineLite();
+                t1.staggerFrom(".draw-me", 0.3, {drawSVG:0},0);
+                t1.restart();
+            
+            $("#page01 section article").hover(function(){
+            $("svg",this).show();
+            t1.restart();
+            },function(){
+                $("svg").hide();
+            });
+
+            
+            $("#slider .slide:first").fadeIn(); 
+            
+            setInterval(function(){
+                
+//            append To젤 위에 있던 레이어를 제일 뒤로 보내라! 라는 뜻
+//            맨 앞에 이미지가 fadeIn되고 나타났다가 맨 뒷장으로 사라지고               그다음 이미지가 fadeIn되는 구조
+                
+               $("#slider .slide:first").fadeIn(); 
+               $("#slider .slide:first").appendTo("#slider");
+               $("#slider .slide:first").hide();
+            },1000);
+           
+        });
+    </script>
+</head>
+<body>
+  
+    <div id="wrap">
+        <header>
+            <nav id="uxlink">
+                <ol>
+                    <li class="info"><a href="#">SEOUL</a></li>
+                    <li class="info">9:49AM</li>
+                    <li class="info">흐림11.8도</li>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">JOIN</a></li>
+                    <li><a href="#">KOREAN</a></li>
+                </ol>
+            </nav>
+            <nav id="uxmain">
+                <h1><a href="#"><img src="img/logo.png" alt="더플라자호텔" /></a></h1>
+                <ul>
+                    <li><a href="#">더 플라자</a></li>
+                    <li><a href="#">스페셜 오퍼</a></li>
+                    <li><a href="#">객실</a></li>
+                    <li><a href="#">다이닝</a></li>
+                    <li><a href="#">웨딩&amp;연회</a></li>
+                    <li><a href="#">부대시설</a></li>
+                    <li><a href="#">멤버십</a></li>
+                    <li><a href="#">올라인 컨시어지</a></li>
+                </ul>
+                <p><a href="#">예약하기</a></p>
+            </nav>
+        </header>
+        <div id="slider">
+           <h2>THE PLAZA</h2>
+            <div id="slider01" class="slide">
+            </div>
+            <div id="slider02" class="slide"></div>
+            <div id="slider03" class="slide"></div>
+            <div id="slider04" class="slide"></div>
+        </div>
+        <div id="page01" class="page">
+            <section>
+                <h3><span>스페셜 오퍼</span><hr></h3>
+                <ul>
+                    <li><a href="#">전체보기</a></li>
+                    <li><a href="#">객실패키지</a></li>
+                    <li><a href="#">다이닝 프로모션</a></li>
+                    <li><a href="#">웨딩&amp;연회</a></li>
+                </ul>
+                <!-- 제목이 있으면 section이나 article을 쓴다.-->
+                <div id="tab_all">
+                    <div id="viewimg"></div>
+                    <article>
+                        <h4>다이닝 프로모션<hr></h4>
+                        <dl>
+                            <dt>Seven Lucky Week</dt>
+                            <dd>새롭게 태어난 세븐스퀘어에서 7일간<br> 행운을 제공하는 고객 감사 이벤트를<br> 준비하였습니다.</dd>
+                            <dd><a href="#">더 보기</a></dd>
+                        </dl>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    width="323px" height="323px" viewBox="0 0 323 323" enable-background="new 0 0 323 323" xml:space="preserve">
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="0" y1="1" x2="323" y2="1"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="1" y1="2" x2="1" y2="323"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="0" y1="322" x2="323" y2="322"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="322" y1="323" x2="322" y2="0"/>
+</svg>
+                      
+                    </article>
+                    <article>
+                        <h4>기타<hr></h4>
+                        <dl>
+                            <dt>웹 회원 특별 할인상품&#40;4월&#41;</dt>
+                            <dd>웹 회원에게만 제공되는 특별한 할인<br> 혜택으로 특급호텔만의 감성을 느껴보<br>세요!</dd>
+                            <dd><a href="#">더 보기</a></dd>
+                        </dl>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    width="323px" height="323px" viewBox="0 0 323 323" enable-background="new 0 0 323 323" xml:space="preserve">
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="0" y1="1" x2="323" y2="1"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="1" y1="2" x2="1" y2="323"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="0" y1="322" x2="323" y2="322"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="322" y1="323" x2="322" y2="0"/>
+</svg>
+                    </article>
+                    <article>
+                        <h4>다이닝 프로모션<hr></h4>
+                        <dl>
+                            <dt>모모노키 수석 셰프 초청 갈라디너</dt>
+                            <dd>일본 도쿄 레스토랑 중 유일하게 3년 연<br>속 미쉐린 2스타를 획득한 고바야시 수<br>석 셰프가 중식당 도원…</dd>
+                            <dd><a href="#">더 보기</a></dd>
+                        </dl>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    width="323px" height="323px" viewBox="0 0 323 323" enable-background="new 0 0 323 323" xml:space="preserve">
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="0" y1="1" x2="323" y2="1"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="1" y1="2" x2="1" y2="323"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="0" y1="322" x2="323" y2="322"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="322" y1="323" x2="322" y2="0"/>
+</svg>
+                    </article>
+                    <article>
+                        <h4>객실 패키지<hr></h4>
+                        <dl>
+                            <dt>스프링 시트러스 컬렉션</dt>
+                            <dd>도심 속 특급호텔에서<br>
+                            싱그러운 봄의 기운을 경험해 보세요.</dd>
+                            <dd><a href="#">더 보기</a></dd>
+                        </dl>
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    width="323px" height="323px" viewBox="0 0 323 323" enable-background="new 0 0 323 323" xml:space="preserve">
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="0" y1="1" x2="323" y2="1"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="1" y1="2" x2="1" y2="323"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="0" y1="322" x2="323" y2="322"/>
+<line class="draw-me" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" x1="322" y1="323" x2="322" y2="0"/>
+</svg>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <div id="page02" class="page">
+            <section>
+                <h3><span>객실</span><hr></h3>
+                <ul>
+                    <li><a href="#">디럭스 룸</a></li>
+                    <li><a href="#">프리미어 스위트</a></li>
+                    <li><a href="#">플라자 스위트</a></li>
+                    <li><a href="#">레지덴셜 스위트</a></li>
+                    <li><a href="#">프레스티지 스위트</a></li>
+                    <li><a href="#">프레지덴셜 스위트</a></li>
+                    <li><a href="#">로열 플라자 스위트</a></li>
+                </ul>
+                <!-- 제목이 있으면 section이나 article을 쓴다.-->
+                <div id="tab_delux">
+                    <div id="room01"></div>
+                    <div id="room02"></div>
+                    <article>
+                      <h5>디럭스 룸<hr></h5>
+                      <ol>
+                          <li>디럭스 룸 디자인의 중요한 콘셉트는<br> '도시의 조망'입니다.<br>트윈, 더블, 패밀리 타입의 룸에서는<br> 각각 다른 도시 조망이 펼쳐집니다.
+                          </li>
+                          <li><a href="#">더 보기</a></li>
+                      </ol>
+                    </article>
+                    <div id="room03"></div>
+                </div>
+            </section>
+        </div>
+        
+        
+        <div id="page03" class="page">
+            <section>
+                <h3><span>다이닝</span><hr></h3>
+                <ul>
+                    <li><a href="#">세븐스퀘어</a></li>
+                    <li><a href="#">도원</a></li>
+                    <li><a href="#">무라사키</a></li>
+                    <li><a href="#">투스카니</a></li>
+                    <li><a href="#">더라운지</a></li>
+                    <li><a href="#">에릭케제르</a></li>
+                </ul>
+                <!-- 제목이 있으면 section이나 article을 쓴다.-->
+                <div id="tab_delux">
+                    <div id="room01"></div>
+                    <div id="room02"></div>
+                    <article>
+                      <h5>세븐스퀘어<hr></h5>
+                      <ol>
+                          <li>
+                            세븐스퀘어는 세계 각국의 음식을 통해<br>
+                            다양한 세대와 계층이 만나는 '삶'의 공간을<br> 
+                            지향하는 라이프스타일 뷔페 레스토랑입니다.
+                          </li>
+                          <li><a href="#">더 보기</a></li>
+                      </ol>
+                    </article>
+                    <div id="room03"></div>
+                </div>
+            </section>   
+        </div>
+        
+        <div id="page04" class="page">
+            <div id="banner">
+               <div id="banner01" class="banbox">
+                   <img src="img/newsletter_bg.jpg" alt="" />
+                    <dl>
+                        <dt>온라인 뉴스레터<hr></dt>
+                        <dd>
+                        뉴스레터를 신청하시면 매월 더 플라자에서 진행되는<br>
+                        다양한 이벤트 &amp; 프로모션을 가장 먼저 만나볼 수 있습니다.
+                        </dd>
+                        <dd><a href="#">구독 신청하기</a></dd>
+                    </dl>
+                </div>
+                <div id="banner02" class="banbox">
+                   <img src="img/membership_bg.jpg" alt="" />
+                    <dl>
+                        <dt>플래티넘 멤버십<hr></dt>
+                        <dd>
+                       더 플라자가 제안하는 PLATINUM 멤버십을 통해<br>
+                        더욱 특별한 서비스를 경험하시기 바랍니다.
+                        </dd>
+                        <dd><a href="#">더 보기</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <footer>
+           <div id="img_logo">
+                <ul>
+                    <li><a href="#"><img src="img/footer_logo1.png"></a></li>
+                    <li><a href="#"><img src="img/footer_logo2.png"></a></li>
+                    <li><a href="#"><img src="img/footer_logo3.png"></a></li>
+                </ul>
+            </div>
+            <div id="footer_menu">
+               <div id="footer_align">
+                    <ul>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#" class="boldmenu">개인정보처리방침</a></li>
+                        <li><a href="#" class="boldmenu">영상정보처리기기 운영&bull;관리방침</a></li>
+                        <li><a href="#">이메일무단수집금지</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">온라인 브로셔</a></li>
+                    </ul>
+                    <ol>
+                        <li><a href="#"><img src="img/footer_ico_fb.png"></a></li>
+                        <li><a href="#"><img src="img/footer_ico_insta.png"></a></li>
+                        <li><a href="#"><img src="img/footer_ico_trip.png"></a></li>
+                    </ol>
+                </div>
+            </div>
+            <div id="footer_adress">
+                <div id="adress_align">
+                    <adress>
+                        <span>
+                            서울특별시 중구 소공로 119 (우) 04525
+                        </span>
+                         <span>
+                            TEL 02.771.2200
+                        </span>
+                        <span>
+                            FAX 02.755.8897
+                        </span>
+                        <span>
+                             Copyright © THE PLAZA All Rights Reserved
+                        </span>
+                    </adress>
+               
+                    <div id ="familybtn">
+                        <p><a href="#">FAMILY SITE</a></p>
+                    </div>
+                 </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+<!--
+    png   
+    1. 투명한 이미지
+    2. 고화질 이미지
+    
+    jpg
+    용량이 작은 이미지
+    
+    gif
+    움직이는 이미지
+-->
+<!--
+제목있고 우선순위가 있는 작고 똑같은 사각형 dl/dt/dd
+작고 똑같은 것이 반복되면 li
+-->
+<!--이미지를 다른이름으로 저장이라고 뜨면 background로 안깔은 것이고, 그냥 다른이름으로 저장은 background로 깔았다는 것이다.-->
+
+<!--
+**기타부호
+공백 &nsbp;
+카피 &copy;
+reg & reg
+TM & trade;
+중점 & bull;
+별 & #x2605;
+-->
+
+<!--
+***svg 사용법***
+1. 일러스트에서 원하는 fill이 없는 라인형태로 그린다.
+2. 원하는 패스를 그린 후 참고 (폰트 같은 경우 creatoutline을하고 라인형태로 바꿔줌)
+3. save as형태로 svg로 저장 하고 svg code를 누른다.
+4. svg부터 svg까지 복사
+5. body밑에 svg소스를 복사
+6. jquery 소스, 이름 (jquery-3.2.0.min.js/drawSVGPlugin.min.js/tweenMax.min.js/) 이 세 개의 jquery를 js 파일에 넣어준다.
+
+7. jquery소스
+     $(function(){
+            var t1 = new TimelineLite();
+                t1.staggerFrom(".draw-me", 1, {drawSVG:0},0);
+                t1.restart();
+                
+     });
+     
+     를 넣어준다.
+8. class = "draw-me" 를 작동이 원하는 부분에 복사하여 넣어준다.
+9. 실행
+
+-->
+
+
+
+

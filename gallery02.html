@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">		
+	<title>gallery</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/gallery02.css">
+	<style>
+
+
+
+		@media all and ( max-width:1200px ) {
+
+		}
+
+		@media all and ( max-width:480px ) {
+			
+		}
+    </style>
+    <script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script>
+        $(function(){
+            $("#wrapper header > ul > li:eq(0)").mouseenter(function(){
+            $('a',this).text("포트폴리오");
+            return false;
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseenter(function(){
+                $('a',this).text("자기소개");
+                return false;
+            });
+            $("#wrapper header > ul > li:eq(2)").mouseenter(function(){
+                $('a',this).text("에필로그");
+                return false;
+            });
+            
+            
+            $("#wrapper header > ul > li:eq(0)").mouseleave(function(){
+                $('a',this).text("설레는");
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseleave(function(){
+                $('a',this).text("두근거리는");
+            });
+            
+            $("#wrapper header > ul > li:eq(2)").mouseleave(function(){
+                $('a',this).text("달달한");
+            });
+            
+        });
+    </script>
+</head>
+<body>
+   <div id="wrapper">
+       <header>
+            <h1><a href="#"><img src="img/logo_black.png"></a></h1>
+            <ul>
+               <li><a href="gallery.html">설레는</a></li>
+               <li><a href="introduce.html">두근거리는</a></li>
+              <li><a href="epilogue.html">달달한</a></li>
+            </ul>
+       </header>
+       
+       <div id="bg01">
+           <div id="bg01_align" class="gallery">
+               <div id="gallery01" class="gallerys">
+                   <hr>
+                   <p><a href="mobileux.html"><img src="img/gallery_circle01.png"></a></p>
+                    <p><img src="img/gallery_fontline.png"></p>
+                   <dl>
+                       <dt>CATEGORY</dt>
+                       <dd><a href="mobileux.html">UX Mobile</a></dd>
+                   </dl>
+                   <p><a href="mobileux.html"><img src="img/gallery_number01.png"></a></p>
+               </div>
+               
+              <div id="gallery02" class="gallerys">
+                   <hr>
+                   <p><a href="bobi.html"><img src="img/gallery_circle02.png"></a></p>
+                    <p><img src="img/gallery_fontline.png"></p>
+                   <dl>
+                      
+                       <dt>CATEGORY</dt>
+                       <dd>Web Design&nbsp;&nbsp;&nbsp;<a href="bobi.html">[Bobbibrow]&nbsp;&nbsp;&nbsp;</a><a href="smeg.html">[Smeg]</a></dd>
+                   </dl>
+                  <p><a href="bobi.html"><img src="img/gallery_number02.png"></a></p>
+               </div>
+               
+             <div id="gallery03" class="gallerys">
+                   <hr>
+                   <p><a href="project.html"><img src="img/gallery_circle03.png"></a></p>
+                   <p><img src="img/gallery_fontline.png"></p>
+                   <dl>
+                      
+                       <dt>CATEGORY</dt>
+                       <dd><a href="project.html">Team Project</a></dd>
+                   </dl>
+                  <p><a href="project.html"><img src="img/gallery_number03.png"></a></p>
+               </div>
+               
+              <div id="gallery04" class="gallerys">
+                   <hr>
+                   <p><a href="logo.html"><img src="img/gallery_circle04.png"></a></p>
+                   <p><img src="img/gallery_fontline.png"></p>
+                   <dl>
+                       <dt>CATEGORY</dt>
+                       <dd><a href="logo.html">Logo Design</a></dd>
+                   </dl>
+                  <p><a href="logo.html"><img src="img/gallery_number04.png"></a></p>
+               </div>
+           </div>
+       </div> <!-- 배경1 -->
+
+       <div id="bg02">
+               <div id="bg02_align" class="gallery">
+                <div id="gallery05" class="gallerys">
+                   <hr>
+                   <p><a href="cording.html"><img src="img/gallery_circle05.png"></a></p>
+                   <p><img src="img/gallery_fontline.png"></p>
+                   <dl>
+                       <dt>CATEGORY</dt>
+                       <dd><a href="cording.html">Cording</a></dd>
+                   </dl>
+                  <p><a href="cording.html"><img src="img/gallery_number05.png"></a></p>
+               </div>
+               
+               
+                <div id="gallery06" class="gallerys">
+                   <hr>
+                   <p><a href="artwork.html"><img src="img/gallery_circle06.png"></a></p>
+                   <p><img src="img/gallery_fontline.png"></p>
+                   <dl>
+                       <dt>CATEGORY</dt>
+                       <dd><a href="artwork.html">Art Work</a></dd>
+                   </dl>
+                  <p><a href="artwork.html"><img src="img/gallery_number06.png"></a></p>
+               </div>
+               
+               
+                 <div id="gallery07" class="gallerys">
+                   <hr>
+                   <p><a href="others.html"><img src="img/gallery_circle07.png"></a></p>
+                   <p><img src="img/gallery_fontline.png"></p>
+                   <dl>
+                       <dt>CATEGORY</dt>
+                       <dd><a href="others.html">Others</a></dd>
+                   </dl>
+                  <p><a href="others.html"><img src="img/gallery_number07.png"></a></p>
+               </div>
+               
+               
+                <div id="gallery08" class="gallerys">
+                   <hr>
+                   <p><a href="dtp.html"><img src="img/gallery_circle08.png"></a></p>
+                   <p><img src="img/gallery_fontline.png"></p>
+                   <dl>
+                       <dt>CATEGORY</dt>
+                       <dd><a href="dtp.html">DTP</a></dd>
+                   </dl>
+                  <p><a href="dtp.html"><img src="img/gallery_number08.png"></a></p>
+               </div>
+            </div>    
+                  <!-- 배경2 -->
+       		<footer></footer>
+       </div>
+       
+     </div>
+</body>
+</html>

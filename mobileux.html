@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">		
+	<title>Mobile UX</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/mobileux.css">
+	<link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width:1200px)"  href="css/screen_mobileux_1200.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width:480px)"  href="css/screen_mobileux_480.css">
+	
+	
+	<style>
+		#wrapper { height:100%; }
+		.wrap { position:relative; height:100%; }
+
+
+		@media all and ( max-width:1200px ) {
+
+		}
+
+		@media all and ( max-width:480px ) {
+			
+		}		
+	</style>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	<script>
+        $(function(){
+            $("#wrapper header > ul > li:eq(0)").mouseenter(function(){
+                $('a',this).text("포트폴리오");
+                return false;
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseenter(function(){
+                $('a',this).text("자기소개");
+                return false;
+            });
+            $("#wrapper header > ul > li:eq(2)").mouseenter(function(){
+                $('a',this).text("에필로그");
+                return false;
+            });
+            
+            
+            $("#wrapper header > ul > li:eq(0)").mouseleave(function(){
+                $('a',this).text("설레는");
+            });
+            $("#wrapper header > ul > li:eq(1)").mouseleave(function(){
+                $('a',this).text("두근거리는");
+            });
+            
+            $("#wrapper header > ul > li:eq(2)").mouseleave(function(){
+                $('a',this).text("달달한");
+            });
+            
+            
+            
+            var winHeight = $(window).height();
+    
+              $("#topbutton").click(function(){
+                $("html,body").animate({scrollTop:0});
+            });
+          
+            
+            $(window).scroll(function(){
+				var scrPos = $(window).scrollTop();
+				if( scrPos > 3500) {
+					$("#design_wrap #intro img:eq(1)").addClass("view");
+				}
+                if(scrPos > winHeight) {
+                    //정해진 컴퓨터 화면보다 스크롤 값이 커지면 보여라.
+                    $("#topbutton").stop().addClass("view");
+                    return false;
+                }else {
+                    $("#topbutton").stop().removeClass("view");
+                    return false;
+                }
+			})
+        });
+    </script>
+</head>
+<body>
+	<div id="wrapper">
+        <header>
+   
+                <h1><a href="index.html"><img src="img/logo_black2.png"></a></h1>   
+                <ul>
+                    <li><a href="gallery.html">설레는</a></li>
+                    <li><a href="introduce.html">두근거리는</a></li>
+                    <li><a href="epilogue.html">달달한</a></li>
+                </ul>
+
+            <hgroup>
+                <h3>Mobile <span>UX Design</span></h3>
+                <h2>SHOOPEN</h2>
+                <h4>Mobile UX Design</h4>
+            </hgroup>
+            <button>
+                <p><a href="dtp.html">prev</a></p>
+                <p><a href="bobi.html">next</a></p>
+            </button>
+            <div id="quickmenu">
+                <ul>
+                    <li><a href="mobileux.html">U<span></span></a></li>
+                    <li><a href="bobi.html">W<sup>1</sup></a></li>
+                    <li><a href="smeg.html">W<sup>2</sup></a></li>
+                    <li><a href="project.html">P</a></li>
+                    <li><a href="logo.html">L</a></li>
+                    <li><a href="cording.html">C</a></li>
+                    <li><a href="artwork.html">A</a></li>
+                    <li><a href="others.html">O</a></li>
+                    <li><a href="dtp.html">D</a></li>
+                </ul>
+            </div>
+            <div id="phone">
+                <img src="img/ux_phone.png">
+            </div>
+        </header>
+        <div id="colorbox"></div>
+        <div id="planpurpose">
+           <hgroup>
+                <h2>PLAN <span>PURPOSE</span></h2>
+                <p>
+                  SHOOPEN은 이랜드몰 여러개의 계열사 중 하나의 계열사로 자사의 기획브랜드 상품을 직접 제조하여<br>유통까지 하는 전문 소매점으로, 남녀 구별없이 유니섹스한 성향의 제품들도 많지만, 아기 자기하고<br>사랑스럽고 캐쥬얼한 디자인의 제품이 많은 것에 비해 너무 디자인이 무겁다는 인상이 들었습니다.<br>
+                  따라서, 접근성이 쉽게 UI/UX를 반영하여 리뉴얼을 하고 싶었습니다.
+                </p>
+            </hgroup>
+        </div>
+        <div id="goalsetting">
+           <div id="goal_wrap">
+              <div id="goal_align">
+               <h2>GOAL <span>SETTING</span></h2>
+                <div id="dl_wrap">
+                <dl>
+                    <dt>GOAL 01</dt>
+                    <dd>
+                        10~20대의 젊은 브랜드를<br>좀 더 감각적이게 표현합니다.
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>GOAL 02</dt>
+                    <dd>
+                        좀 더 여성스럽고 다양한<br>디자인이 있다는 것을<br>어필합니다.
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>GOAL 03</dt>
+                    <dd>
+                        남녀 공용의 느낌을<br>잃지 않습니다.
+                    </dd>
+                </dl>
+                </div>
+             </div>
+           </div>
+        </div>
+        <div id="strategy">
+            <div id="strategy_wrap">
+                <h2><span>STRATEGY</span></h2>
+                <div id="img_area">
+                    <img id="u_s" src="img/ux_strategy.png">
+                    <img id="u_s480" src="img/ux_strategy_480.png">
+                </div>
+            </div>
+        </div>
+        <div id="identity">
+           <div id="identity_wrap">
+                <h2><span>IDENTITY</span></h2>
+                <div id="color">
+                   <p>color</p>
+                   <hr>
+                    <ul>
+                        <li><a href="#">#000000</a></li>
+                        <li><a href="#">#f99ac8</a></li>
+                        <li><a href="#">#f6c0da</a></li>
+                        <li><a href="#">#ffdee7</a></li>
+                    </ul>
+                </div>
+                <div id="font_ex">
+                    <p>Font</p>
+                    <hr>
+                    <img id="f_ux" src="img/font_ux.png">
+                    <img id="f_ux_480" src="img/font_ux_480.png">
+                </div>
+                <div id="logo">
+                    <p>Logo</p>
+                    <hr>
+                    <img id="l_ux" src="img/logo_ux.png">
+                    <img id="l_ux_480" src="img/logo_ux_480.png">
+                </div>
+            </div>
+        </div>
+        <div id="design">
+            <h2><span>DESIGN</span></h2>
+            <div id="design_bottom">
+              <img id="u_d_b" src="img/ux_design_bottom.png">
+              <img id="u_d_b_480" src="img/ux_design_bottom_480.png">
+            </div>
+        </div>
+        <footer>
+            <ul>
+                <li><a href="tel:010-7767-0891">TEL : 010-7767-0891</a></li>
+                <li><a href="mailto:sjqnfl90@naver.com">E-MAIL : sjqnfl90@naver.com</a></li>
+                <li><a href="http://lovelydesigner.co.kr">HOMPAGE : lovelydesigner.co.kr</a></li>
+                <li><a href="#">이 사이트는 chorme에 최적화 되어 있습니다.</a></li>
+            </ul>
+        </footer>
+	</div>
+	<div id="topbutton">
+	    <a href="#"><img src="img/top_button.png"></a>
+	</div>
+</body>
+</html>
+<!--
+중요한 제목 같은 것이 있으면 dl dt dd
+작고 비슷한 사각형 : ul li
+-->

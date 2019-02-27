@@ -1,0 +1,72 @@
+<style>
+
+</style>
+<header>
+    <nav>
+        <h1><img src="img/logo.png" alt="이랜드로고"></h1>
+        <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">사업소개</a></li>
+            <li><a href="#">인재채용</a></li>
+            <li><a href="#">현황&amp;뉴스</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="subUX">
+    <nav>
+        <hgroup>
+            <h2>Total Service</h2>
+            <h3>고객의 삶의 질을 향상시키는 토탈서비스 지식회사</h3>
+        </hgroup>
+        <ul>
+            <li>
+                <ol>
+                    <li><a href="#">이랜드서비스소개</a></li>
+                    <li><a href="#">비젼&amp;미션</a></li>
+                    <li><a href="#">핵심가치</a></li>
+                    <li><a href="#">회사연혁</a></li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><a href="#">자산관리</a></li>
+                    <li><a href="#">MRO</a></li>
+                    <li><a href="#">경영지원</a></li>
+                    <li><a href="#">CSV</a></li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><a href="#">인재상</a></li>
+                    <li><a href="#">인사제도</a></li>
+                    <li><a href="#">채용안내</a></li>
+                </ol>
+            </li>
+            <li>
+                <ol>
+                    <li><a href="#">인증현황</a></li>
+                    <li><a href="#">수상현황</a></li>
+                    <li><a href="#">뉴스</a></li>
+                </ol>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+<script>
+$(function(){
+    $("header ul").mouseenter(function(){
+    $("header").addClass("view");
+    $("header nav h1 img").attr("src","img/logo_black.png");
+    $("#subUX").show();
+});
+
+$("#subUX").mouseleave(function(){
+    $(this).hide();
+    $("header").removeClass("view");                    
+    $("header nav h1 img").attr("src","img/logo.png"); 
+});
+});
+
+</script>

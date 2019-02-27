@@ -1,0 +1,16 @@
+div id="section"
+
+h2
+div
+p
+dl
+dd
+dt
+dd
+
+저장 
+*.php  -> include
+*.jsp ->
+*.asp ->
+
+인크루드 : 불러오는 방식

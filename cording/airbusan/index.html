@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+  
+    <title>airbusan</title>
+     <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+      <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>   
+      <script type="text/javascript" src="jquery.banner.js"></script>
+      <link rel="stylesheet" href="css/androidicons.css"/>
+      <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+      <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto' rel='stylesheet' type='text/css'>
+      <script src="js/jquery-1.11.2.min.js"></script>
+      <script src="js/m_nav.js"></script>
+      <script src="js/jquery.flexslider-min.js"></script>
+     
+        
+    <style>
+       /*구글에서 제공하는 나눔고딕 웹폰트주소*/
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        
+        *{margin:0px;padding:0px;}
+        ul, ol{list-style-type:none;}
+        img{border:none;}
+        a{text-decoration:none;}
+        body{width:100%;height:100%;
+            position:relative;
+            font-family:'Nanum Gothic', Verdana, Arial;
+            font-size:0.75em;
+            color:#999;
+        }
+        
+        /*헤더영역 안의 메뉴 위치 잡기*/
+		.ui-header{position:relative;}
+		ui-header label{position:absolute;top:5px;left:5px;}
+		
+		/*헤더영역 안의 메뉴 위치 잡기*/
+		.ui-header{position:relative;}
+		.ui-header label{position:absolute;top:10px;left:10px;cursor:pointer;}
+		.ui-header #log_mnu{position:absolute;top:10px;right:10px;cursor:pointer;}
+		.ui-header .ai-list{font-size:26px;font-weight:bold;color:#21346f;}
+		.ui-header #log_mnu{font-size:12px;font-weight:bold;border:1px solid #21346f;padding:10px 5px;border-radius: 3px;color:#21346f;}
+		
+        /*헤더안에 배경색깔 넣기*/
+        .ui-header {background-color:#fff;}
+		/*korean air 로고 최대-최소로 만들기*/
+		.ui-header h1 img{max-width:310px;width:30%;}
+        
+        /*체크박스*/
+        #btn{display:none;}
+        
+        /*토글키*/
+		#btn ~ nav{opacity:0;margin-left:-200px;transition-duration:1s;}
+		#btn:checked ~ nav{opacity:1;margin:0px;}
+        
+		
+		/*내비게이션 서식*/
+        nav{background-color:#3366cc;width:200px;height:100%;position:absolute;top:0px;left:0px;z-index:999;}
+      nav label{color:#fff;line-height:36px;cursor:pointer;padding-left:10px;}
+      .ai-gear{font-size:15px;color:#fff;position:absolute;top:5px;right:10px;}
+
+      nav ul{}
+      nav ul li{line-height:30px;border-bottom:1px solid #fff;}
+      nav ul li:nth-of-type(1){background-color:#21346f;border:none;}
+      nav ul li a{display:block;font-size:13px;line-height:30px;font-weight:bold;color:#fff;padding-left:10px;}
+      nav ul li  .ai-plus{position:absolute;right:10px;}
+		
+        
+        /*네비게이션 영역*/
+        #navi {}
+        #navi li{height:42px;border:1px solid #ccc;box-sizing:border-box;}
+        #navi li a{background-color:#21346f;font-size:1.2em;font-weight:bold;color:#fff;}
+        
+        /*사진왼쪽정렬*/
+        #imglist {margin-top:-60px;}
+        #imglist .img01{width:25%;float:left;position:relative;}
+        #imglist .img01 p{position:absolute;top:70%;font-size:1.2em;font-weight:bold;color:#555;width:100%;text-align:center;}
+        #imglist img{width:100%;}
+        
+        /*플러스 키 넣기*/
+        
+        #plus{position:relative;}
+        #plus1{position:absolute;right:20px;top:0px;}
+        #plus1 .ai-plus{color:#fff;}
+        
+        #fun{position:relative;}
+        #fun1{position:absolute;right:20px;top:0px;}
+        #fun1 .ai-plus{color:#989898;}
+        
+         
+        #story{position:relative;}
+        #story1{position:absolute;right:20px;top:0px;}
+        #story1 .ai-plus{color:#fff;}
+        
+        /*컨텐츠영역*/
+        #notice{clear:both;width:100%;height:40px;line-height:40px;background-color:#989898;}
+        #notice p{font-size:1.3em;color:#fff;margin-left:40px;}
+      
+        
+        #notice1{overflow:hidden;width:100%;height:80px;}
+        #notice1 #n1-1{float:left;width:60%;height:50px;padding:15px 0px 0px 15px;}
+        #notice1 #n1-1 li{list-style:none;padding-top:5px;}
+        #notice1 #n1-1 li {font-size:1.4em;font-weight:bold;color:#989898;}
+        #notice1 #n1-2{float:right;width:20%;height:50px;position:relative;margin:15px 15px 0px 0px;}
+        #notice1 #n1-2 #n1-2-1 {position:absolute;right:0;}
+        #notice1 #n1-2 #n1-2-1 li{list-style:none;font-size:1.4em;font-weight:bold;color:#989898;padding-top:5px;}
+        
+        /*콘텐츠 그림 영역*/
+        #notice2{clear:both;overflow:hidden;width:100%;}
+        #notice2 #n2-1{width:50%;float:left;}
+        #notice2 #n2-1 #n2-1-1{width:100%;height:40px;line-height:40px;background-color:#f1f1f1;}
+        #notice2 #n2-1 #n2-1-1 p{font-size:1.2em;font-weight:bold;color:#000;margin-left:10px;}
+        #notice2 #n2-1 #n2-1-2 img{width:96%;padding:10px 1% 10px 2%;}
+        
+        #notice2 #n2-2{width:50%;float:left;}
+        #notice2 #n2-2 #n2-2-1{width:100%;height:40px;line-height:40px;background-color:#989898;}
+        #notice2 #n2-2 #n2-2-1 p{font-size:1.2em;font-weight:bold;color:#ffffff;margin-left:10px;}
+        #notice2 #n2-2 #n2-2-2 img{width:96%;padding:10px 1% 10px 2%;}
+        
+        /*푸터영역*/
+        .ui-footer .f_lnb{height:34px;background-color:#ccc;padding-left:30px;}
+        .ui-footer .f_lnb li{float:left;line-height:34px;}
+        .ui-footer .f_lnb li a{display:block;padding:0px 5px 0px 5px;color:#333;}
+        .ui-footer .f_lnb li a:hover{text-decoration:underline;}
+        
+        .ui-footer address{height:100px;background-color:#333;color:#ccc;font-style:normal;line-height:22px;padding-top:16px;padding-left:20px;}
+       
+        #add{width:100%;position:relative;}
+        #but{width:300px;height:30px;position:absolute;top:20px;left:400px;}
+    </style>    
+    </head>
+    <body>
+       <div data-role="page" data-theme="f" id="index">
+           <input type="checkbox" data-role="none"   id="btn" />
+            <div data-role="header" data-theme="f">
+                <label for="btn">
+                    <span class="ai-list"></span>
+                </label>
+                <h1>
+                    <img src="./images/logo_main.png" alt="로고" />
+                </h1>
+                <p id="log_mnu">로그인</p>
+                
+                <div data-role="navbar" id="navi">
+                    <ul>
+                        <li><a href="#">개인</a></li>
+                        <li><a href="#">국내선 예약</a></li>
+                        <li><a href="#">국제선 예약</a></li>
+                    </ul>
+                </div><!--navbar종료-->
+           </div><!--header 종료-->
+            
+           <nav>
+			<ul>
+				<li>
+                    <label for="btn">
+                        <span class="ai-home"></span>
+                    </label>
+
+                    <label for="btn">
+                        <span class="ai-gear"></span>
+                    </label>
+                    
+				</li>
+				
+				<li><a href="#">예약/스케줄<span class="ai-plus"></span></a></li>
+				<li><a href="#">예약조회<span class="ai-plus"></span></a></li>
+				<li><a href="#">FLY&amp;STAMP<span class="ai-plus"></span></a></li>
+				<li><a href="#">FLY&amp;JOY<span class="ai-plus"></span></a></li>
+                <li><a href="#">호텔<span class="ai-plus"></span></a></li>
+                <li><a href="#">렌터카<span class="ai-plus"></span></a></li>
+                <li><a href="#">기내면세점<span class="ai-plus"></span></a></li>
+				<li><a href="#">서비스안내<span class="ai-plus"></span></a></li>
+				<li><a href="#">고객센터<span class="ai-plus"></span></a></li>
+				<li><a href="#">모바일 전용 기능 안내<span class="ai-plus"></span></a></li>
+			</ul>
+		</nav>
+
+       <div id="slide">
+                 <div class="flexslider">
+                      <ul class="slides">
+                        <li>
+                          <img src="./images/main01.png" alt="이미지1" />
+                        </li>
+                         <li>
+                          <img src="./images/main02.png" alt="이미지2" />
+                        </li>
+                      </ul>
+                </div>
+            </div>
+            
+           <div id="imglist">
+               <div class="img01"><a href="#"><img src="./images/icon_w_in.jpg" /></a><p>국내선예약</p></div>
+               <div class="img01"><a href="#"><img src="./images/icon_g_out.jpg" /></a><p>국제선예약</p></div>
+               <div class="img01"><a href="#"><img src="./images/icon_w_business.jpg" /></a><p>가입우대 예약</p></div>
+               <div class="img01"><a href="#"><img src="./images/icon_g_tour.jpg" /></a><p>여행시우대예약</p></div>
+               <div class="img01"><a href="#"><img src="./images/icon_g_today.jpg" /></a><p>나홀로오늘예약</p></div>
+               <div class="img01"><a href="#"><img src="./images/icon_w_stamp.jpg" /></a><p>FLY & STAMP</p></div>
+               <div class="img01"><a href="#"><img src="./images/icon_g_seat.jpg" /></a><p>좌석배정</p></div>
+               <div class="img01"><a href="#"><img src="./images/icon_w_booking.jpg" /></a><p>예약조회</p></div>
+            </div>
+          
+           <div id="content">
+            <div id="notice">
+                <div id="plus">
+                    <p>공지사항</p>
+                    <div id="plus1"><span class="ai-plus"></span></div>
+                </div>
+            </div>
+            <div id="notice1">
+                <div id="n1-1">
+                    <li>● 하계항공권 판매 시작에 대한 안내</li>
+                    <li>● FLY & EARLY 관련 안내</li>
+                </div>
+                <div id="n1-2">
+                    <div id="n1-2-1">
+                        <li>2016-01-11</li>
+                        <li>2016-01-11</li>
+                    </div>
+                </div>
+            </div>
+            <div id="notice2">
+                <div id="n2-1">
+                    <div id="n2-1-1">
+                        <div id="fun">
+                            <p>FLY & FUN</p>
+                            <div id="fun1"><span class="ai-plus"></span></div>
+                        </div>
+                    </div>
+                    <div id="n2-1-2">
+                        <img src="./images/thefaceshop.png" />
+                    </div>
+                </div>
+                <div id="n2-2">
+                    <div id="n2-2-1">
+                        <div id="story">
+                            <p>FLY & STORY</p>
+                            <div id="story1"><span class="ai-plus"></span></div>
+                        </div>
+                    </div>
+                    <div id="n2-2-2">
+                        <img src="./images/thefaceshop2.png" />
+                    </div>
+                </div>
+            </div>
+           </div>
+           
+           <div data-role="footer" data-theme="f">
+                <ul class="f_lnb">
+                    <li><a href="#">운송약관</a></li><li>|</li>
+                    <li><a href="#">이용약관</a></li><li>|</li>
+                    <li><a href="#">개인정보취급방치</a></li><li>|</li>
+                    <li><a href="#">PC버전보기</a></li>
+                </ul>
+               <div id="add">
+                   <address>
+                    <span>
+                        사업자등록번호 : 605-81-84518<br />
+                        통신판매업 신고번호 : 제 2016 000호 &copy; 2016 AIR BUSAN <br />부산시 부산진구 황령대로 00 0층 00000
+                    </span>
+                    <div id="but">
+                    <button data-theme="d">TOP▲</button>
+                    </div>
+               </address>
+               </div>
+           </div>
+        </div>
+    </body>
+</html>

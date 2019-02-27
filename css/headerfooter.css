@@ -1,0 +1,58 @@
+@charset "utf-8";
+#wrapper {width:100%;height:100%;background-color:#fee4cd; overflow:hidden;}
+header {width:100%;height:70px;position:relative;}
+header h1 {float:left;width:45px;padding-top:25px;box-sizing:border-box;margin-left:2vw;}
+header h1 img{width:45px;}
+header > ul {float:right;padding-top:40px;box-sizing:border-box;margin-right:8%;}
+header > ul > li {float:left;margin-left:2vw; width:6vw; text-align:center;}
+header > ul > li:nth-of-type(1) {margin:0;}
+header > ul > li > a {color:black;font-weight:400;font-size:1.0vw;}
+
+footer { position:absolute; height:40px; background:#36312b; width:90%; bottom:0; left:5%; text-align:center; overflow:hidden; }
+
+footer ul { display:inline-block; }
+footer ul li {position:relative;float:left;line-height:44px; margin-left:7vw;}
+footer ul li:first-child { margin-left:0; }
+footer ul li:before {position:absolute;top:22px; content:"|";color:#a8a7a4; margin-left:-10px; line-height:20px; }
+
+footer ul li a {color:#a8a7a4;font-size:0.8vw;}
+
+@media all and ( max-width:1000px ) {
+	/* #wrapper { overflow:auto; }
+	.gallery .gallerys { width:49%; height:50%;}
+	#bg01 { height:100%; }
+	#bg02 { height:100%; } */
+	
+    
+    
+/*
+    
+    header > ul > li {float:left;margin-left:2vw; width:18vw; text-align:center;}	
+	header h1 {margin-left:5%;}	
+*/
+	footer ul li:nth-of-type(1) { display:none; }
+    
+    header h1 {float:left;width:45px;padding-top:25px;box-sizing:border-box;margin-left:2vw;}
+    header h1 img{width:45px;}
+
+    header > ul {float:right;padding-top:40px;box-sizing:border-box;margin-right:8%;}
+    header > ul > li {float:left;margin-left:2vw;width:10vw;text-align:center;}
+    header > ul > li:nth-of-type(1) {margin:0;}
+    header > ul > li > a {color:#000000;font-weight:400;font-size:2vw;}
+    
+    
+
+}
+
+@media all and ( max-width:480px ) {
+	footer ul li:nth-of-type(1) { display:none; }		
+	footer ul li:nth-of-type(2) { display:none; }	
+	footer ul li:nth-of-type(3) { display:none; }
+
+    
+    header > ul {float:right;padding-top:40px;box-sizing:border-box;margin-right:8%;}
+    header > ul > li {float:left;margin-left:2vw;width:18vw;text-align:center;}
+    header > ul > li:nth-of-type(1) {margin:0;}
+    header > ul > li > a {color:000000;font-weight:400;font-size:3.5vw;}
+
+}

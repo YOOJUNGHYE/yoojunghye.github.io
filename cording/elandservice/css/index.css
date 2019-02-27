@@ -1,0 +1,298 @@
+@charset "utf-8";    
+
+#wrapper{width:100%;height:100%;}
+.wrap {display:flex;width:100%;height:100%;align-items: center;justify-content:center;}
+/*display:flex: 위아래좌우정렬을 맞추기위해 준비된.. 레이아웃같은느낌인가... ; align-items : 위아래정렬; justify-content:좌우정렬*/
+.wrap section {width:1100px;height:650px;text-align: center;}
+
+.wrap section h4{color:#333333;}
+.wrap section h2{color:#333333;}
+
+
+
+
+
+
+/*subUX*/
+
+#subUX {position:fixed;width:100%;top:80px;z-index:100;background:#ffffff;padding:40px 0;display:none;}
+#subUX nav {width:1100px;margin:0 auto;}
+#subUX nav hgroup {position:fixed;height:217px;width:800px;background:rgba(222,222,222,0.5);left:50%;margin-left:-1100px;}
+#subUX nav hgroup h2 {font-size:50px;width:200px;line-height:55px;color:#00356b;float:right;}
+#subUX nav hgroup h3 {font-size:16px;width:200px;color:#00356b;line-height:20px;margin-top:15px;float:right;clear:both;}
+#subUX nav ul {float:left;margin-left:358px;}
+#subUX nav ul > li {float:left;width:170px;}
+#subUX nav ul a {color:#000000;text-decoration:none;}
+#subUX nav ul > li > ol > li {margin-top:20px;}
+
+
+/*aside*/
+
+aside {position:fixed;width:37px;height:280px;z-index:100;left:100px;top:50%;margin-top:-140px;}
+aside ul li {margin-bottom:10px;position:relative;}
+aside ul li a {display:block; width:37px;height:37px;background:url(../img/page_navs.png) no-repeat center;color:white;text-align:center;font-size:14px;line-height:37px;}
+
+aside ul li.view a {background-image:url(../img/page_nav.png);}
+/*        li의 순서값을 이용해서 view를 입히려고 a태그가 아닌 li태그에 view를 줌*/
+
+
+aside ul li span {display:none;position:absolute;width:105px;height:32px;left:45px;background:url(../img/tag.png) no-repeat;top:4px;}
+
+
+
+
+#page01{background:#031625;align-items:flex-end;}
+#page01 #slider{width:1100px;height:850px;position:relative;}
+#page01 #slider #slider01 {width:1100px;height:850px;background:url(../img/main_visual01_new.jpg) no-repeat center bottom;background-size:110%;}
+
+
+#page01 #slider .slide hgroup{position:absolute;color:white;z-index:100;width:390px;height:170px;top:150px;left:50%;margin-left:-195px;opacity:0;}
+#page01 #slider .slide hgroup.view {opacity:1;top:200px;transition:all 0.7s 0.3s;}
+
+#page01 #slider .slide hgroup h3{font-size:21px;font-weight:300;letter-spacing:10px;line-height:45px;}
+#page01 #slider .slide hgroup h3 hr{border:none;border-top:1px solid white;width:130px;position:absolute;right:15px;top:55px;}
+#page01 #slider .slide hgroup h2{font-size:64px;}
+
+
+#page02 section #cardbox{position:absolute;margin-top:30px;}
+#page02 section #cardbox article{position:relative;width:250px;height:440px;float:left;margin-left:32px;}
+
+#page02 section h4{font-size:20px}
+#page02 section h2{font-size:30px}
+#page02 section p{font-size:14px}
+#page02 section hgroup{opacity:0;margin-top:50px;}
+#page02 section hgroup.view{transform:translateY(-50px);opacity:1;transition:all 1s;}
+
+
+#page02 section #cardbox article:first-child{margin-left:0;}
+#page02 section #cardbox article h2,#page02 section #cardbox article p{opacity:0;z-index:100;position:absolute;width:100%;top:0;left:0;text-align:center;color:white;}
+#page02 section #cardbox article h2.view,#page02 section #cardbox article p.view{opacity:1;transition:all 0.3s 0.8s;}
+
+
+#page02 section #cardbox article h2{top:100px;}
+#page02 section #cardbox article h2 hr{width:7px;border:none;border-top:3px solid white;}
+#page02 section #cardbox article p{top:200px;}
+#page02 section #cardbox article span {position:relative;width:250px;height:440px;overflow:hidden;display:block;}
+
+
+
+/*          position:relative;은 display:block이 안되고, position:absolute;는 display:block이 됨  */
+/*        {width:72px;height:72px;top:400px;box-shadow:0 5px 20px rgba(0,0,0,0.3);opacity:0;transform:translateY(30px);} */
+
+/*        서서히 나타나게 하려면 opacity:0을 display:none대신에 준다.*/
+
+
+
+
+#page02 section #cardbox article a {position:absolute;width:72px;height:72px;bottom:-55px;left:50%;margin-left:-36px;box-shadow:0 5px 20px rgba(0,0,0,0.3);background:#c69c6d url(../img/icon_plus.png) no-repeat center;opacity:0;    }
+#page02 section #cardbox article:hover a{opacity:1;bottom:-36px;transition:all 0.5s;}
+
+#page02 section #cardbox article img{transform:translateX(-250px);} /*width:250px의 이미지를 안보이게 감추었다가*/
+#page02 section #cardbox article img.view{transform:translateX(0px);transition:all 0.5s 0.5s;} /*원상태로 복귀*/
+#page02 section #cardbox article:hover img{transform:scale(1.2);transition:all 0.5s;}
+
+
+
+/*page03*/
+#page03 section #cardbox02{position:absolute;margin-top:30px;}
+#page03 section #cardbox02 article{position:relative;width:250px;height:440px;float:left;margin-left:32px;}
+
+#page03 section h4{font-size:20px}
+#page03 section h2{font-size:30px}
+#page03 section p{font-size:14px}
+#page03 section hgroup{opacity:0;margin-top:50px;}
+#page03 section hgroup.view{transform:translateY(-50px);opacity:1;transition:all 1s;}
+
+
+#page03 section #cardbox02 article:first-child{margin-left:0;}
+#page03 section #cardbox02 article h2,#page03 section #cardbox02 article p{opacity:0;z-index:100;position:absolute;width:100%;top:0;left:0;text-align:center;color:white;}
+#page03 section #cardbox02 article h2.view,#page03 section #cardbox02 article p.view{opacity:1;transition:all 0.3s 0.8s;}
+
+
+#page03 section #cardbox02 article h2{top:100px;}
+#page03 section #cardbox02 article h2 hr{width:7px;border:none;border-top:3px solid white;}
+#page03 section #cardbox02 article p{top:200px;}
+#page03 section #cardbox02 article span {position:relative;width:250px;height:440px;overflow:hidden;display:block;}
+
+
+
+#page03 section #cardbox02 article a {position:absolute;width:72px;height:72px;bottom:-55px;left:50%;margin-left:-36px;box-shadow:0 5px 20px rgba(0,0,0,0.3);background:#c69c6d url(../img/icon_plus.png) no-repeat center;opacity:0;    }
+#page03 section #cardbox02 article:hover a{opacity:1;bottom:-36px;transition:all 0.5s;}
+
+#page03 section #cardbox02 article img{transform:translateX(-250px);}
+#page03 section #cardbox02 article img.view{transform:translateX(0px);transition:all 0.5s 0.5s;}
+#page03 section #cardbox02 article:hover img{transform:scale(1.2);transition:all 0.5s;}
+
+
+
+/*page04*/
+
+#page04 section #cardbox03{position:absolute;margin-top:30px;}
+#page04 section #cardbox03 article{position:relative;width:345.33px;height:380px;float:left;margin-left:32px;}
+
+#page04 section h4{font-size:20px}
+#page04 section h2{font-size:30px}
+#page04 section p{font-size:14px}
+#page04 section hgroup{opacity:0;margin-top:50px;}
+#page04 section hgroup.view{transform:translateY(-50px);opacity:1;transition:all 1s;}
+
+#page04 section #cardbox03 article {border:1px solid #aeaeae;	 width:345px; height:380px; float:left; margin-top:40px; opacity:0;}
+#page04 section #cardbox03 article:first-child{margin-left:0;}
+#page04 section #cardbox03 article h2,#page04 section #cardbox03 article p{opacity:0;z-index:100;position:absolute;width:100%;top:0;left:0;text-align:center;color:#333333;}
+#page04 section #cardbox03 article h2.view,#page04 section #cardbox03 article p.view{opacity:1;transition:all 0.3s ;}
+#cardbox03 article.view{opacity:1;transition:all 0.3s;}
+
+
+
+#page04 section #cardbox03 article:nth-of-type(1).view {
+    opacity:1;margin-top:0;transition:all 0.5s;
+}
+#page04 section #cardbox03 article:nth-of-type(2).view {
+    opacity:1;margin-top:0;transition:all 0.5s;
+}
+#page04 section #cardbox03 article:nth-of-type(3).view {
+    opacity:1;margin-top:0;transition:all 0.5s;
+}
+
+/*
+애니메이션
+#page04 #cardbox03 article:nth-of-type(1).view { opacity:1; margin-top:0; transition:all 0.5s; }
+#page04 #cardbox03 article:nth-of-type(2).view { opacity:1; margin-top:0; transition:all 0.5s 0.3s; }
+#page04 #cardbox03 article:nth-of-type(3).view { opacity:1; margin-top:0; transition:all 0.5s 0.5s; }
+*/
+
+
+
+
+#page04 section #cardbox03 article:hover:nth-of-type(1){
+    background:#c69c6d;border-color: #c69c6d;
+}
+#page04 section #cardbox03 article:hover:nth-of-type(2){
+    background:#acacac;border-color: #acacac;
+}
+#page04 section #cardbox03 article:hover:nth-of-type(3){
+    background:#00356b;border-color: #00356b;
+}
+
+
+
+
+
+#page04 section #cardbox03 article h2{top:50px;font-weight:500;}
+#page04 section #cardbox03 article h2 hr{width:7px;border:none;border-top:3px solid #333333;}
+#page04 section #cardbox03 article p{top:130px;}
+
+
+#page04 section #cardbox03 article:hover h2{color:#ffffff;}
+#page04 section #cardbox03 article:hover h2 hr{border-top:3px solid #ffffff;}
+#page04 section #cardbox03 article:hover p{color:#ffffff;}
+
+
+
+
+/*#page04 section #cardbox03 article span 
+{position:relative;width:250px;height:440px;overflow:hidden;display:block;}*/
+
+#page04 section #cardbox03 article span {
+    width:124px;height:124px;border-radius:124px;display:block;position:absolute;left:50%;margin-left:-62px;bottom:50px;}
+#page04 section #cardbox03 article:nth-of-type(1) span {
+ background:url(../img/ms_list01.png) #f3f3f3 no-repeat center;}
+#page04 section #cardbox03 article:nth-of-type(2) span {
+ background:url(../img/ms_list02.png) #f3f3f3 no-repeat center;}
+#page04 section #cardbox03 article:nth-of-type(3) span {
+ background:url(../img/ms_list03.png) #f3f3f3 no-repeat center;}
+
+
+
+#page04 section #cardbox03 article a {position:absolute;width:72px;height:72px;bottom:-55px;left:50%;margin-left:-36px;box-shadow:0 5px 20px rgba(0,0,0,0.3);background:#c69c6d url(../img/icon_plus.png) no-repeat center;opacity:0;    }
+#page04 section #cardbox03 article:hover a{opacity:1;bottom:-36px;transition:all 0.5s;}
+
+#page04 section #cardbox03 article img{transform:translateX(-250px);}
+#page04 section #cardbox03 article img.view{transform:translateX(0px);transition:all 0.5s;}
+#page04 section #cardbox03
+article:hover img{transform:scale(1.2);transition:all 0.5s;}
+
+
+
+
+
+
+
+/*page05*/
+#page05{background:url(../img/main_qna_bg01.jpg) center;background-size:cover;}
+
+#page05.bg01 {background-image:url(../img/main_qna_bg01.jpg);}
+#page05.bg02 {background-image:url(../img/main_qna_bg02.jpg);}
+#page05.bg03 {background-image:url(../img/main_qna_bg03.jpg);}
+
+
+
+#page05 section hgroup {width:448px;height:248px;margin:100px auto 30px;color:white;text-align:center;text-align:center;opacity:0;}
+#page05 section hgroup.view {margin-top:50px;opacity:1;transition:all 1s;}
+
+#page05 section hgroup h4 {color:white;font-size:20px; font-family: 'HelveticaNeueLTStd-BdEx';}
+#page05 section hgroup h2 {color:white;font-size:30px;margin-top:10px;}
+#page05 section hgroup p {margin-bottom:40px;font-size:14px;margin-top:10px;}
+#page05 section hgroup a {color:white;border:1px solid white;padding:5px 20px;}
+
+
+#page05 section ul {display:inline-block;}
+/*가로 값은 안주고 부모에 text-align을 하고 싶을 때 display:inline-block;을 주려고 / margin:0 auto;를 주려면 정확한 width값을 줘야함*/
+
+#page05 section ul li {float:left;width:130px;height:165px;margin-left:100px;}
+#page05 section ul li:first-child {margin-left:0;}
+#page05 section ul li a {color:white;}
+#page05 section ul li a span {display:block;width:124px;height:124px;border:1px solid white;border-radius:124px;background-repeat: no-repeat;box-sizing:border-box;background-position:center;}
+
+#page05 section ul li:hover a span {
+    background-color:#a98862;border:none;
+}
+
+/*순서는 ul li에서 li만 순서값을 가지고 있고 각각의 span은 li에 하나씩만 들어가 있으므로 순서값을 갖고 있지 않다 따라서 쓸때는 li:nth-of-type(1) a span이라고 명령을 준다.*/
+#page05 section ul li:nth-of-type(1) a span.view {border:none;background-image:url(../img/icon_qna01_ov.png);background-color:#a98862;}
+#page05 section ul li:nth-of-type(1) a span {background-image:url(../img/icon_qna01.png);}
+#page05 section ul li:nth-of-type(1):hover a span{background-image:url(../img/icon_qna01_ov.png);}
+
+
+#page05 section ul li:nth-of-type(2) a span {background-image:url(../img/icon_qna02.png);}
+#page05 section ul li:nth-of-type(2):hover a span{background-image:url(../img/icon_qna02_ov.png);}
+
+#page05 section ul li:nth-of-type(3) a span {background-image:url(../img/icon_qna03.png);}
+#page05 section ul li:nth-of-type(3):hover a span{background-image:url(../img/icon_qna03_ov.png);}
+
+
+/*
+#page06 { height:500px; background:#f3f3f3;}
+#page06 section hgroup {margin:70px auto 40px;color:white;text-align:center;opacity:0;}
+#page06 section hgroup.view {margin-top:20px;opacity:1;transition:all 1s;}
+#page06 section { height:448px; }
+*/
+
+#page06 { height:500px; background:#f3f3f3;}
+#page06 section { height:500px; }
+
+#page06 section hgroup { opacity:0; margin-top:70px;}
+#page06 section hgroup.view {transform:translateY(-20px); opacity:1; transition:all 1s;  }
+#page06 section hgroup h4 {font-size:20px;}
+#page06 section hgroup h2 {font-size:30px; }
+
+
+
+
+
+
+
+
+
+	.slider {width: 1100px; height:200px; margin: 30px auto; }
+    .slick-slide { width:530px; height:180px; margin:0 20px;background-color:white;padding:30px;box-sizing:border-box;}
+    .slick-prev:before, .slick-next:before {  color: red; }
+    .slick-prev { position:absolute; width:50px; height:50px; background:black; border:none; z-index:100; top:230px; left:50%; margin-left:-55px; text-indent:-9999px; background-image:url(../img/csv_arrow_prev.png); background-repeat:no-repeat; background-position:center; background-size:35%; }
+
+    .slick-next { position:absolute; width:50px; height:50px; background:black; border:none; z-index:100; top:230px; left:50%; margin-left:25px; text-indent:-9999px;background-image:url(../img/csv_arrow_next.png); background-repeat:no-repeat; background-position:center; background-size:35%;}
+    .regular dl { float:left; width:280px; letter-spacing:-1px; }
+    .regular p { float:left; }
+
+
+
+

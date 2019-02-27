@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+   <!--이렇게 ▲위에 lang="ko"부터 meta name까지 다 준비하고, 스타일시트 reset.css연결하는게 기본준비입니닷★★-->
+    <title>ELAND SERVICE</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+    
+        
+    </style>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+        var winHeight = $(window).height(); /*윈도우의 높이값을 컴퓨터가 다 다르기때문에 이게 켜지는 윈도우마다 하이트값을 구해와라*/
+        
+        // li의 순서값을 이용해서 view를 입히려고 a태그가 아닌 li태그에 view를 줌
+        $("aside ul li:eq(0)").addClass("view"); 
+        $("aside ul li:eq(0) a span").show();
+        $("#page01 #slider .slide hgroup").addClass("view")
+        $(window).scroll(function(){/*윈도우의 스크롤을 알아낼건데*/
+            var scPos = $(window).scrollTop();/*스크롤 높이값을 알아와서 scPos로 이름을 주고...*/
+            
+            //공통적인것             
+            $("aside ul li").removeClass("view");
+            $("aside ul li a span").hide();
+            
+//            공통적으로 removeClass와 hide를 줘서 전체적으로 없앤다음, 조건에 맞는 if문에서 충족되는 조건이 있다면
+//            그것을 수행한 후 공통적인 조건으로 다시 돌아가기 때문에 공통적인것(removeClass와hide)이 적용될 수 있다.
+            
+            if(scPos > winHeight*5 - 100){
+              
+
+                
+                $("aside ul li:eq(5)").addClass("view"); 
+                $("aside ul li:eq(5) a span").show();   
+            }
+            else if(scPos > winHeight*4 - 100){
+             
+                $("aside ul li:eq(4)").addClass("view"); 
+                $("aside ul li:eq(4) a span").show(); 
+            }
+            else if(scPos > winHeight*3 - 100){
+              
+                
+                $("aside ul li:eq(3)").addClass("view"); 
+                $("aside ul li:eq(3) a span").show(); 
+            }
+            else if(scPos > winHeight*2 - 100){
+                
+                $("#page03 section hgroup").addClass("view"); 
+                $("#page03 section #cardbox02 article img").addClass("view");
+                $("#page03 section #cardbox02 article h2").addClass("view");
+                $("#page03 section #cardbox02 article p").addClass("view");
+
+                
+                $("aside ul li:eq(2)").addClass("view"); 
+                $("aside ul li:eq(2) a span").show(); 
+            }
+            else if (scPos > winHeight - 100){ /*soPos >= winHeight 크거나 같다 해도되고 그 근처만 가면 나와라 할려면 윈도우 높이값보다 -100정도 줘서 일찍 나올수도있심*/ // winHeight의 높이값이 만약에 1000이라면 두번째 화면이 나오기 전 900높이에서 실행하라는 뜻이다.
+                
+                $("#page02 section hgroup").addClass("view"); 
+                $("#page02 section #cardbox article img").addClass("view");
+                $("#page02 section #cardbox article h2").addClass("view");
+                $("#page02 section #cardbox article p").addClass("view");
+                
+                
+                $("aside ul li:eq(1)").addClass("view"); 
+                $("aside ul li:eq(1) a span").show();
+                
+            }else{
+                
+                $("aside ul li:eq(0)").addClass("view"); 
+                $("aside ul li:eq(0) a span").show();  
+            
+            }
+        });
+       
+        
+        
+        
+        
+        $(".wrap").mousewheel(function(e, delta){
+            currentTop = $(this).offset().top;/*해당 페이지의 위치값!(마진탑의 위치값..?)*/
+            if (delta > 0){ /*delta=마우스 휠을 위로 돌리면 마이너스가 실행되고..*/
+                $("html,body").stop().animate({scrollTop: currentTop - winHeight},1000,"easeInOutQuart");
+                return false;
+            }else{/*delta=마우스 휠을 반대로(아래로)돌리면 플러스로 실행돼라..*/
+                $("html,body").stop().animate({scrollTop: currentTop + winHeight},1000,"easeInOutQuart");
+                return false;
+            }/*마우스 스크롤할때 딱딱 걸리는 효과*/
+            
+            $(window).resize(function(){
+                winHeight=$(window).height();
+            });/*윈도우 사이즈에 맞춰서 높이값도 바꿔 맞춰라(윈도우값이 작아지면 작아지고..)*/   
+            
+        });
+        
+     
+        $("aside ul li").click(function(){
+            var chkIndex = $(this).index(); //index는 내가 누른 것의 위치를 알아내라는 뜻
+        $("html,body").animate({scrollTop:winHeight*chkIndex});
+            return false;
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <nav>
+                <h1><img src="img/logo.png" alt="이랜드로고"></h1>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">사업소개</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#">현황&amp;뉴스</a></li>
+                </ul>
+            </nav>
+        </header>
+        <aside>
+            <ul>
+                <li><a href="#"><span>HOME</span></a></li>
+                <li><a href="#"><span>자산관리</span></a></li>
+                <li><a href="#"><span>MRO</span></a></li>
+                <li><a href="#"><span>경영지원</span></a></li>
+                <li><a href="#"><span>CSV</span></a></li>
+                <li><a href="#"><span>이랜드소식</span></a></li>
+            </ul>
+        </aside><!--나도 이거 쓸꺼에욧!-->
+        <div id="page01" class="wrap">
+            <div id="slider">
+                <div id="slider01" class="slide">
+                    <hgroup>
+                        <h3>스마트한 혁신과 섬세함으로 <strong>감동을 선사하는</strong><hr/></h3>
+                        <h2>이랜드 서비스</h2>
+                    </hgroup>
+                </div>
+                <div id="slider02" class="slide"></div>
+            </div>
+        </div>
+        <div id="page02" class="wrap">
+            <section>
+               <hgroup>
+                    <h4>ASSET MANAGEMENT</h4>
+                    <h2>자산관리</h2>
+                    <p>자산관리 사업부는 부동산 종합 관리 역량을 통해 고객의 편리성과 만족도는<br/>
+                        극대화하고, 비용과 에너지는 최소화하는 토탈 서비스를 제공합니다.</p>
+                </hgroup>   
+                    
+                <div id="cardbox">
+                    <article><!--제목이 있어서 아티클, 제목이 없으면 div써도 상관없습니닷.-->
+                        <span><img src="img/main_asset01.png" alt=""></span>
+                        <h2>서비스소개<hr/></h2>
+                        <p>PM, FM, 소방 점검/공사,<br />
+                        에너지 절감,시설안전 관리,<br />
+                        주택임대관리</p>
+                        <a href="#"></a>
+                    </article>
+                    
+                    
+                    
+                    <article>
+                        <span><img src="img/main_asset02.png" alt=""></span>
+                        <h2>서비스특징<hr/></h2>
+                        <p>먼저 찾아가는 Before Service,<br/>
+                        가족과 같은 Family Service</p>
+                        <a href="#"></a>
+                    </article>
+                    
+                    
+                    
+                    <article>
+                        <span><img src="img/main_asset03.png" alt=""></span>
+                        <h2>실적 사례<hr/></h2>
+                        <p>자산관리서비스를 통해 성장하는<br/>
+                        고객사들을 확인하세요.</p>
+                        <a href="#"></a>
+                    </article>
+                    
+                    
+                    
+                    <article>
+                        <span><img src="img/main_asset04.png" alt=""></span>
+                        <h2>Q&amp;A<hr/></h2>
+                        <p>궁금하신 사항을 신속하고<br/>
+                        친절히 안내드립니다.</p>
+                        <a href="#"></a>
+                    </article>
+                    
+                   
+                    
+                </div>    
+            </section> <!--내용이있고 ★제목★도 있으면 섹션-->
+        </div>
+        <div id="page03" class="wrap">
+            <section>
+                   <hgroup>
+                        <h4>MAINTENANCE &bull;REPAIR &bull;OPERATION</h4>
+                        <h2>유지보수</h2>
+                        <p>구매 비용의 절감은 물론 비효율적 낭비를 줄여<br/>
+                        핵심 비즈니스에 더욱 집중하실 수 있습니다.</p>
+                    </hgroup>
+                  <div id="cardbox02">
+                    <article><!--제목이 있어서 아티클, 제목이 없으면 div써도 상관없습니닷.-->
+                        <span><img src="img/main_asset01.png" alt=""></span>
+                        <h2>서비스소개<hr/></h2>
+                        <p>PM, FM, 소방 점검/공사,<br />
+                        에너지 절감,시설안전 관리,<br />
+                        주택임대관리</p>
+                        <a href="#"></a>
+                    </article>
+                    
+                    
+                    
+                    <article>
+                        <span><img src="img/main_asset02.png" alt=""></span>
+                        <h2>서비스특징<hr/></h2>
+                        <p>먼저 찾아가는 Before Service,<br/>
+                        가족과 같은 Family Service</p>
+                        <a href="#"></a>
+                    </article>
+                    
+    
+                    <article>
+                        <span><img src="img/main_asset03.png" alt=""></span>
+                        <h2>실적 사례<hr/></h2>
+                        <p>자산관리서비스를 통해 성장하는<br/>
+                        고객사들을 확인하세요.</p>
+                        <a href="#"></a>
+                    </article>
+                    
+                    
+                    <article>
+                        <span><img src="img/main_asset04.png" alt=""></span>
+                        <h2>Q&amp;A<hr/></h2>
+                        <p>궁금하신 사항을 신속하고<br/>
+                        친절히 안내드립니다.</p>
+                        <a href="#"></a>
+                    </article>
+                </div>    
+            </section>
+        </div>
+        <div id="page04" class="wrap">
+            <section>
+                <h4>MANAGEMENT SUPPORT</h4>
+                <h2>경영지원</h2>
+                <p>이랜드 그룹의 재무 조직을 시작으로 10년 이상 쌓아온 노하우와<br/>
+                    전문지식으로 고객의 고민과 리스크를 해결해드립니다.</p>
+            </section>
+        </div>
+        <div id="page05" class="wrap">
+            <section>
+                <h4>CSV</h4>
+                <h2>서비스 소개</h2>
+                <p>‘나눔’의 실천을 사회 공헌과 CSR 영역에서 CSV로 확대하여 <br/>
+                그룹의 경제·사회적 가치를 창출하는데 목적이 있습니다.</p>
+            </section>
+        </div>
+        <div id="page06" class="wrap">
+            <section>
+                <h4>ELANDSERVICE NOTICE</h4>
+                <h2>이랜드서비스 소식</h2>
+            </section>
+        </div>
+    </div>    
+</body>
+</html>

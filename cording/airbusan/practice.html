@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> airBUSAN</title>
+	<meta charset="UTF-8">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+		<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+		<meta name="viewport" content="width=divice-width, initial-scale=1, maximum-scale=1">
+		<link type="text/css" rel="stylesheet" href="./css/androidicons.css" />
+		<link type="text/css" rel="stylesheet" href="./css/flexslider.css" />
+		<script src="./css/m_nav.js"></script>
+	    <script src="./css/jquery.flexslider-min.js"></script>
+	    <script src="./css/respond.min.js"></script>
+	    <link rel="shortcut icon" type="image/png" href="https://story.airbusan.com/m/assets/images/favicon.png">   
+
+		<style type="text/css">
+			@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+			*{margin:0px; padding:0px;}
+			ul, ol { list-style-type:none; }
+			img{border:none;}
+			a{text-decoration: none;}
+			body {width:100%; height:100%; position: relative;font-family: 'nanumgothic',Verdana,Arial; font-size: 0.75em; /* 0.75em은 pixel단위로 12px, %단위 100%이다.*/ color:#999; background-color: #fff; text-shadow: none;}
+			.clear{clear:both;}
+	/*헤더 영역 */	
+		
+			#header{background:url("./img/bac.jpg"); position: relative;}
+			#header label { position: absolute; top:25px; left:10px; }
+			#header label .ai-list {font-size: 2em; color:#333; cursor: pointer; }		
+			#header h1 {text-align: center;}
+			#header h1 img {width:100%; max-width:100px; }
+			#header p {position: absolute; top:25px; right: 10px;}
+	/*토글 버튼 */		
+			#btn {display:none;}
+			#btn ~ #nav {opacity: 0;  margin-left:-5000px; transition-duration:5s;}
+			#btn:checked ~ #nav {opacity: 1; margin:0px; transition-duration:1s;}
+
+	/*네비 영역 */	
+			#nav{background-color: #333; width:100%; height: 100%; position:fixed;top:0; left: 0; z-index: 99;overflow: hidden; background-color:rgba(10, 10, 19, 0.6);} 
+			#nav_bg p {background-color: #333; width: 100% height:100%; float:left;} 
+			#nav ul {background-color: #045FB4; position: relative; width:220px; height: 100%; float:left; background-color:rgba(4, 95, 180, 0.6);}
+			#nav ul li{padding: 10px 5px; border-bottom: 1px solid #fff; background-color: #045FB4;}
+			#nav ul li a {text-shadow: none; color: #fff; font-weight: bold; font-size: 1.1em;}
+			.ai { background-color:#29088A;  height:20px;}
+			.ai-home, .ai-gear{font-size: 20px; text-shadow: none; color: #fff;}
+			.ai-home {position: absolute; top: 10px; left:5px; cursor: pointer;}
+			.ai-gear {position: absolute; top: 10px; right:5px; cursor: pointer;}
+			.ai-plus {position: absolute; right: 8px;}	
+	/* 콘텐츠 영역*/
+
+		/* 리스트 */
+			#icon {overflow: hidden; margin-top: -60px;}
+			.icon_i {float: left; width: 25%; position: relative;}
+			.icon_i img{width:100%; z-index: 3;}
+			.icon_i p { text-align:center; width:100%; z-index: 10; position: absolute; bottom:15%; color:#333; font-size: 1.0em;}
+
+
+		/*공지사항*/		
+			#notice_p {background-color: #888; color:#ccc; padding:10px 0px 10px 30px; font-weight: bold; text-shadow: none; font-size: 1.2em; overflow: hidden;}
+			#notice_p .notice_a {float: left;}
+			#notice_p img {float: right; width:25px; padding-right: 10px;}
+			#notice_ul li {overflow: hidden; padding: 2%; background-color: #fff;}
+			#notice_ul a { color:#333; font-size: 1em; text-shadow: none; }
+			.notice_li {float: right; font-size: 0.9em;}
+
+		/*그리드 영역*/
+
+			.grid div{width:50%; float:left; background-color: #fff;}
+			.grid h4 {font-weight: bold; font-size: 1.1em; padding: 10px 0 10px 20px; box-sizing: border-box; text-shadow: none; width:100%; overflow: hidden;}
+			.block-a h4{background-color: #eee; position: absolute; }
+			.block-b h4{background-color: #888; position: absolute;}
+			.grid .ui-img {width:100%; box-sizing: border-box; padding: 2%; z-index:5;}
+			.grid p{text-shadow: none; background-color: #fff; background-color:rgba(10, 10, 19, 0.6); position:relative; bottom:35px; z-index: 90; padding:3%; box-sizing: border-box; margin:2%;}
+			.grid p:first-line{ color:#fff; font-weight: bold; font-size: 1.2em;}	
+			.grid span {color:#ccc; font-size: 1.0em; margin-top: 1%;}		
+	/*푸터*/
+			#footer #fp {background-color: #fff;overflow: hidden;height:30px;}
+			.f_list {float: left;}
+			.f_i {float:right;}
+			.f_i img {width:23px;}
+			.f_list li {float: left; font-size: 0.8em; line-height: 30px;}
+			.f_list li a {text-shadow: none; color: #666; text-decoration: none; display: block;}
+			.f_list li a:hover{text-decoration: underline;}
+			#footer address {font-size: 0.8em; background-color: #666; text-shadow: none; color: #fff; padding:15px; line-height: 18px; font-style: normal;}	
+
+			.top{opacity:0.5; position:fixed; bottom:10px; right:10px;text-align:center; line-height:20px; color:#000;}
+
+		</style>
+	<!--top 버튼 스크립트-->		
+		<script type="text/javascript">
+			$(document).ready(function(){$(".top").click(function(){return $("html, body").animate({scrollTop:0},300),!1})});
+		</script>
+</head>
+<body>
+	<div data-role="page" deta-theme="f" id="index">
+		<input type="checkbox" id="btn" data-role="none"/>
+
+		<div data-role="header" data-theme="c" id="header">
+			<label for="btn"><span class="ai-list"></span></label>
+			<h1><a href="#index"><img src="./img/logo.png"></a></h1>
+			<p><input type="button" name="login" value="로그인"></p>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#inedx"> 개인 </a></li>
+					<li><a href="#inedx"> 국내선 예약 </a></li>
+					<li><a href="#inedx"> 국제선 예약 </a></li>
+				</ul>
+			</div>
+			<!--슬라이드 이미지-->
+			<div class="flexslider" >
+	  	  <!--<div class="flexslider">-->
+		        <ul class="slides" >
+		            <!--<div class="sliders">-->
+			        <li ><img src="./img/banner.png" alt="banner1"></li>
+			        <li><img src="./img/banner2.png" alt="banner2"></li>
+			     </ul> 	
+			</div>  <!--flexslider--> 
+		</div>
+<!--header end-->	
+		<div id="nav">
+			<ul>
+				<li class="ai">
+					<label for="btn"><span class="ai-home"></span></label>
+					<label for="btn"><span class="ai-gear"></span></label>
+				</li>
+				<li><a href="#"> 예약/스케줄 <span class="ai-plus"></span></a></li>
+				<li><a href="#"> 예약 조회 <span class="ai-plus"></span></a></li>
+				<li><a href="#"> FLY & STAMP<span class="ai-plus"></span></a></li>
+				<li><a href="#"> FLY & JOY <span class="ai-plus"></span></a></li>
+				<li><a href="#"> 호텔 </a></li>
+				<li><a href="#"> 렌터카 </a></li>
+				<li><a href="#"> 기내면세점</a></li>
+				<li><a href="#"> 서비스안내 <span class="ai-plus"></span></a></li>
+				<li><a href="#"> 고객센터 <span class="ai-plus"></span></a></li>
+				<li><a href="#"> 모바일 전용 기능 안내 <span class="ai-plus"></span></a></li>
+				<li><a href="#"> 예약/스케줄 <span class="ai-plus"></span></a></li>
+				<li><a href="#"> 예약/스케줄 <span class="ai-plus"></span></a></li>
+			</ul>
+			<div id="nav_bg"><p>&nbsp;</p></div>
+		</div>	
+
+		<div id="content">
+			<div id="icon">
+				<div class="icon_i"><a href="#index"><img src="./img/icon_w_in.jpg" alt="국내선예약"><p>국내선예약</p></a></div>
+				<div class="icon_i"><a href="#index"><img src="./img/icon_g_out.jpg" alt="국제선예약"><p>국제선예약</p></a></div>
+				<div class="icon_i"><a href="#index"><img src="./img/icon_w_business.jpg" alt="가입우대예약"><p>가입우대 예약</p></a></div>
+				<div class="icon_i"><a href="#index"><img src="./img/icon_g_tour.jpg" alt="여행사우대예약"><p>여행사우대예약</p></a></div>
+				<div class="icon_i"><a href="#index"><img src="./img/icon_g_today.jpg" alt="나홀로오늘예약"><p>나홀로오늘예약</p></a></div>
+				<div class="icon_i"><a href="#index"><img src="./img/icon_w_stamp.jpg" alt="FLY&STAMP"><p>FLY&STAMP</p></a></div>
+				<div class="icon_i"><a href="#index"><img src="./img/icon_g_seat.jpg" alt="좌석배정"><p>좌석배정</p></a></div>
+				<div class="icon_i"><a href="#index"><img src="./img/icon_w_booking.jpg" alt="예약조회"><p>예약조회</p></a></div>
+			</div>
+			<div id="notice">
+				<p id="notice_p"><span class="notuce_a">공지사항</span> <img src="https://story.airbusan.com/m/assets/images/common/btn_notice_on_more.png" alt="이동"></p>
+				<ul id="notice_ul">
+					<li><a href="#index">하계 항공권 판매 시작 안내<span class="notice_li">2016-01-11</span></a></li>
+					<li><a href="#index">FLY&EARLY 관련 안내<span class="notice_li">2016-01-11</span></a></li>
+				</ul>
+			</div> <!--notice end-->
+
+			<div class="grid" >
+				<div class="block-a">
+					<h4>FLY & FUN</h4>
+					<img src="./img/section.png" class="ui-img" alt="FLY">
+					<p>부산/더페이스샵
+					<br /> <span>10% 할인(부산/울산 / 양산 전지점</span></p>
+				</div>
+				<div class="block-b">
+					<h4>FLY & STORY</h4>
+					<img src="./img/section2.png" class="ui-img" alt="FLY">
+					<p> 부산/목장원
+					<br /><span>오채담, 카페드봄 주중 10% 할인</span></p>
+				</div>
+			</div> <!--grid end-->
+		</div>
+		<div id="footer" >
+			<p id="fp">
+				<ul class="f_list">
+					<li><a href="#index" title="운송약관"> 운송약관 </a></li><li> │ </li>
+					<li><a href="#index" title="이용약관"> 이용약관 </a></li><li> │ </li>
+					<li><a href="#index" title="개인정보취급방침"> 개인정보취급방침 </a></li><li> │ </li>
+					<li><a href="#index" title="PC버전"> PC버전 </a></li><li> │ </li>
+					<li><a href="#index" title="앱"> 앱 </a></li>				
+				</ul>
+				<p class="f_i">
+					<span class="ai-twitter"></span>
+					<select name="country" data-role="none">
+						<option>language</option>
+						<option> 한국어</option>
+						<option> 日本語</option>
+						<option> 繁體中文</option>
+						<option> 简体中文</option>
+						<option> ENGLISH</option>
+					</select>
+				</p>
+			</p>
+			<div class="clear"></div>                 
+			<address>
+				사업자등록번호 : 605-81-84518<br/>
+                통신판매업 신고번호 : 제 2011 부산진-0199호 ©2013 AIR BUSAN<br/>
+                부산시 부산진구 황령대로 24 6층 | 47354<br/><br/>
+                Copyright 2009 BY AIR BUSAN CO., LTD. All Rights reserved.
+            </address>
+		</div>
+		<a href="#" class="top"><img src="./img/btop.png" width="40" ></a>
+	</div>
+</body>
+</html>
